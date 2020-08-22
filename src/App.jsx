@@ -1,9 +1,18 @@
 import React from 'react';
-import { BroserRouter , Switch , Route } from 'react-router-dom';
-import './App.css';
+import { BrowserRouter , Switch , Route } from 'react-router-dom';
+
+import Layout from './Components/Layout';
+
+import './App.scss';
 
 function App() {
-  return <p>hola mundo</p>
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Layout />
+      </Switch>
+    </BrowserRouter>
+  )
 }
 
 export default App;

@@ -1,0 +1,10 @@
+@mixin border-test($color: red){
+    border: 1px solid $color;
+}
+
+@mixin flexbox($justify-content:center,$align-items:center,$direction:row){
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    direction: $direction;
+}
