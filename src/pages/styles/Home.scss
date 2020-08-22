@@ -67,6 +67,7 @@
 }
 
 .Home__teacher-in-title{
+  // @include border-test(purple);
   margin: 0;
   margin-bottom: 20px;
   font-family: $font-raleway;
@@ -77,9 +78,56 @@
 }
 
 .Home__teacher-in-list{
+  // @include border-test(purple);
   display: grid;
-  grid-template-columns: repeat(6,16%);
+  grid-template-columns: repeat(6,15%);
   grid-template-rows: 100%;
+  grid-column-gap: 2%;
+  & .Home__teacher-in-item{
+  // @include border-test(purple);
+    & img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.Home__experience{
+  // @include border-test(black);
+  @include flexbox();
+  padding: 20px 0;
+  width: 100vw;
+  margin: 20px 0;
+  & .Home__experience-card{
+    border: 2px solid $color-greenBig;
+    width: 55%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    & .Home__experience-card-right{
+      @include flexbox(center,center,column);
+      border-left: 1px solid  $color-greenBig;
+      padding: 20px 15%;
+      text-align: center;
+      
+      & h1{
+        font-family: $font-roboto;
+        font-weight: bold;
+        font-size: 2rem;
+        color: black;
+
+      }
+
+      & h5{
+        font-family: $font-roboto;
+        font-weight: normal;
+        font-size: 1.5rem;
+        color: #979797;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1750px){

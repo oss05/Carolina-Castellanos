@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Button from '../Components/Button';
+import ProfileCard from '../Components/ProfileCard';
 
 import HeroImg from '../images/hero-img.png';
 import esij from '../images/ESIJ.png';
@@ -9,6 +10,10 @@ import tecMonterrey from '../images/tecMonterrey.png';
 import tsjGuerrero from '../images/tsjGuerrero.png';
 import unam from '../images/unam.png';
 import up from '../images/up.png';
+import Facebook from '../images/Facebook.png';
+import Twitter from '../images/Twitter.png';
+import Linkedln from '../images/Linkedln.png';
+import profile from '../images/profile.png';
 
 
 import './styles/Home.scss';
@@ -51,6 +56,28 @@ class Home extends React.Component{
                         </div>
                         <div className="Home__teacher-in-item">
                             <img src={up} alt=""/>
+                        </div>
+                    </div>
+                </section>
+                <section className="Home__experience">
+                    <div className="Home__experience-card">
+                        <div className="Home__experience-card-left">
+                            <ProfileCard 
+                            Facebook={Facebook}
+                            Twitter={Twitter}
+                            Linkedln={Linkedln}
+                            profile={profile}
+                            name="Carolina Castellanos Lopez"
+                            job="Abogada Consultora"
+                            option="ALL POSTS"
+                            />
+                        </div>
+                        <div className="Home__experience-card-right">
+                            <h1>Experiencia</h1>
+                            <h5> Es abogada mexicana especialista en arbitraje y solución alternativa de controversias. </h5>
+                            <Button 
+                            message="Ver más"
+                            />
                         </div>
                     </div>
                 </section>

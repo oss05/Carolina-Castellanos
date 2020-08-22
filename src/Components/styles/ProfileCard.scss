@@ -1,0 +1,63 @@
+@import "../../sassUtils/mixins.scss";
+@import "../../sassUtils/vars.scss";
+
+.ProfileCard{
+  // @include border-test(blue);
+  @include flexbox(center,center,column);
+  width: 100%;
+  & *{
+    margin: 0;
+  }
+
+  & .ProfileCard__img{
+    border-radius: 50%;
+    margin-top: 25px;
+    max-width: 90%;
+    max-height: 50%;
+  }
+
+  & .ProfileCard__name{
+    // @include border-test(blue);
+    margin: 20px 20px;
+    font-family: $font-monserrat;
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 25px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #212121;
+  }
+
+  & .ProfileCard__titleJob{
+    // @include border-test(blue);
+    font-family: $font-monserrat;
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #838C8D;
+    margin: 20px 20px;
+    margin-top: 0;
+  }
+
+  & .ProfileCard__social{
+    // @include border-test(green);
+    width: 100%;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    & .ProfileCard__social-item{
+      @include border-test($color-greenBig);
+      @include flexbox();
+      height: 50px;
+    }
+
+  }
+  & .ProfileCard__option{
+    color: #838C8D;
+    font-family: $font-monserrat;
+    font-weight: bold;
+    font-size: 0.8rem;
+    line-height: 40px;
+    letter-spacing: 2px;
+  }
+}
