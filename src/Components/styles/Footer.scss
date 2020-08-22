@@ -1,0 +1,55 @@
+@import "../../sassUtils/mixins.scss";
+@import "../../sassUtils/vars.scss";
+
+.Footer{
+    // @include border-test(blue);
+    @include flexbox(center,flex-start);
+    width: 100vw;
+    padding: 10px 0 70px 0;
+    background-color: $color-greenBig;
+    & .Footer__menu{
+        // @include border-test(blue);
+        width: 40%;
+
+        & ul{
+            @include flexbox(space-between);
+            list-style: none;
+            & li{
+                float: left;
+                & a{
+                    text-decoration: none;
+                    color: white;
+                    font-family: $font-roboto;
+                    font-weight: 500;
+                    line-height: 20px;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+    & .Footer__others{
+        // @include border-test(blue);
+        margin-top: 40px;
+        margin-left: 80px;
+        & i{
+            & a{
+                color: white;
+                text-decoration: none;
+                font-family: $font-roboto;
+                font-weight: 500;
+                line-height: 20px;
+                font-size: 1.2rem;
+                font-style: normal;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 1050px){
+    .Footer{
+        & .Footer__menu{
+            width: 60%;
+        }
+    }
+}

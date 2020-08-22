@@ -1,0 +1,18 @@
+@import "../../sassUtils/mixins.scss";
+@import "../../sassUtils/vars.scss";
+
+.Button{
+  @include flexbox();
+  padding: 5px 30px;
+  height: 35px;
+  border-radius: 15px;
+  border: 2px solid $color-greenBig;
+  cursor: pointer;
+  & p{
+    margin: 0;
+    font-family:  $font-raleway;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: black;
+  }
+}

@@ -1,0 +1,117 @@
+@import "../../sassUtils/mixins.scss";
+@import "../../sassUtils/vars.scss";
+
+.Home{
+  // @include border-test(blue);
+  width: 100vw;
+}
+
+.Home__hero{
+  // @include border-test(blue);
+  @include flexbox(flex-end);
+  width: 100%;
+  position: relative;
+  & .Home__hero-img{
+    width: 90%;
+  }
+
+  & .Home__hero-details{
+    // @include border-test(red);
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: white;
+    opacity: 0.8;
+
+
+    & > .Home__hero-details-container{
+      // @include border-test(green);
+      @include flexbox(center,center,column);
+      opacity: 1;
+      width: 70%;
+      height: 90%;
+      position: absolute;
+      bottom: 5%;
+      color: black;
+      padding-left: 10%;
+      & h1{
+        font-family: $font-raleway;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 68px;
+        font-size: 4rem;
+      }
+
+      & > p{
+        margin: 0;
+        font-family: $font-roboto;
+        font-size: 1.3rem;
+        line-height: 25px;
+        font-weight: 500;
+        font-style: normal;
+        margin-bottom: 50px;
+      }
+
+      
+    }
+  }
+}
+
+.Home__teacher-in{
+  // @include border-test(purple);
+  width: 90vw;
+  margin: 2vh 5vw;
+}
+
+.Home__teacher-in-title{
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: $font-raleway;
+  font-style: normal;
+  font-weight: bold;
+  color: black;
+  font-size: 1.3rem;
+}
+
+.Home__teacher-in-list{
+  display: grid;
+  grid-template-columns: repeat(6,16%);
+  grid-template-rows: 100%;
+}
+
+@media screen and (max-width: 1750px){
+  .Home__hero{
+    & .Home__hero-details{
+      & > .Home__hero-details-container{
+        & h1{
+          font-size: 3rem;
+          line-height: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px){
+  .Home__hero{
+    & .Home__hero-details{
+      height: 70%;
+      width: 60%;
+      & > .Home__hero-details-container{
+        & h1{
+          font-size: 2.5rem;
+          line-height: 40px;
+          margin-bottom: 15px;
+        }
+
+        & > p{
+          margin-bottom: 30px;
+        }
+
+      }
+    }
+  }
+}
