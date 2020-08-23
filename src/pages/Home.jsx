@@ -61,6 +61,8 @@ class Home extends React.Component{
                 </section>
                 <section className="Home__experience">
                     <div className="Home__experience-card">
+                        <div className="Home__experience-decorate">
+                        </div>
                         <div className="Home__experience-card-left">
                             <ProfileCard 
                             Facebook={Facebook}

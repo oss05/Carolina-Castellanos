@@ -98,14 +98,33 @@
   padding: 20px 0;
   width: 100vw;
   margin: 20px 0;
+
+  
+  
+  
   & .Home__experience-card{
+    position: relative;
     border: 2px solid $color-greenBig;
+    background-color: white;
     width: 55%;
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-rows: 100%;
     border-radius: 15px;
-    overflow: hidden;
+    
+    
+    & .Home__experience-decorate{
+      width: 5vw;
+      height: 80%;
+      background-color: $color-greenBig;
+      position: absolute;
+      z-index: -1;
+      top: 10%;
+      right: -5%;
+      border-radius: 15px;
+
+    }
+
     & .Home__experience-card-right{
       @include flexbox(center,center,column);
       border-left: 1px solid  $color-greenBig;
