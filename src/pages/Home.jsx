@@ -2,6 +2,7 @@ import React from 'react';
 
 import Button from '../Components/Button';
 import ProfileCard from '../Components/ProfileCard';
+import Services from '../Components/Services';
 import Contact from '../Components/Contact';
 
 import HeroImg from '../images/hero-img.png';
@@ -84,6 +85,7 @@ class Home extends React.Component{
                         </div>
                     </div>
                 </section>
+                <Services />
                 <Contact />
             </div>
         )
