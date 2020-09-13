@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 
 import FloatMenu from './FloatMenu';
 
@@ -15,7 +15,9 @@ const Navbar = (props) =>{
                     <img src={logo} alt="logo"/>
                 </figure>
                 <div className="Navbar__menu">
-                    <FloatMenu />
+                    <FloatMenu
+                    state={props.state}
+                    />
                 </div>
             </div>
         </React.Fragment>
