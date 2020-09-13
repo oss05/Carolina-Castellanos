@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import FloatMenu from './FloatMenu';
+
 import './styles/Navbar.scss';
 import logo from '../images/Logo.png';
+
 
 const Navbar = (props) =>{
     return (
@@ -12,12 +15,7 @@ const Navbar = (props) =>{
                     <img src={logo} alt="logo"/>
                 </figure>
                 <div className="Navbar__menu">
-                    <ul>
-                        <li> <Link to="" > Inicio </Link> </li>
-                        <li> <Link to="" > Trayectoria </Link> </li>
-                        <li> <Link to="" > Servicios </Link> </li>
-                        <li> <Link to="" > Contacto </Link> </li>
-                    </ul>
+                    <FloatMenu />
                 </div>
             </div>
         </React.Fragment>
