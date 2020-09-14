@@ -12,7 +12,7 @@
   & .Hero-triangle{
     position: absolute;
     top: -70px;
-    width: 25%;
+    width: 30%;
   }
   & .Hero-decorate{
     // border: 1px solid red;
@@ -44,12 +44,12 @@
   
   grid-column: 1/2;
   grid-row: 1/2;
-  padding: 120px 50px 180px 10%;
+  padding: 50px 50px 130px 10%;
   font-family: $font-roboto;
   
   & .Hero-hand{
     position: absolute;
-    width: 37%;
+    width: 45%;
     height: 130%;
     right: 0;
     bottom: 0;
@@ -57,8 +57,8 @@
     
   & .Hero__left-title{
     // border: 1px solid blue;
-    width: 40%;
-    font-size: 2.5rem;
+    width: 50%;
+    font-size: 2.4rem;
   }
 
   & .Hero__left-description{
@@ -76,4 +76,94 @@
   @include flexbox(space-between,flex-start,column);
   padding-left: 50px;
   padding-bottom: 70%;
+}
+
+@media screen and(max-width: 1270px){
+ .Hero__left .Hero-hand{
+  width: 45%;
+ }
+ .Hero__left .Hero__left-title{
+  font-size: 1.8rem;
+  width: 50%;
+ }
+
+ .Hero__left .Hero__left-description{
+  font-size: 1rem;
+  width: 40%;
+ }
+
+ .Hero__right{
+  padding-bottom: 100%;
+  padding-left: 10px;
+ }
+}
+
+@media screen and(max-width: 1050px){
+ .Hero__left .Hero__left-title{
+  font-size: 1.5rem;
+  width: 50%;
+ }
+
+ .Hero__left .Hero__left-description{
+  font-size: 1rem;
+  width: 50%;
+ }
+ 
+ .Hero__left{
+  padding-top: 30px;
+  padding-bottom: 100px;
+ }
+
+ .Hero .Hero-triangle{
+  width: 35%;
+ }
+}
+
+@media screen and (max-width: 850px){
+ .Hero__left .Hero-hand{
+  display: none;
+ }
+ .Hero{
+  grid-template-rows: auto auto;
+  grid-column-gap: 5px;
+  grid-template-columns: 80% 20%;
+  background-color: #C4C4C4;
+  padding-bottom: 10px;
+ }
+ .Hero .Hero-triangle{
+  display: none;
+ }
+ .Hero .Hero-decorate{
+  display: none;
+ }
+
+ .Hero__left{
+  background-color: white;
+  grid-row: 2/3;
+  @include flexbox(center,center,column);
+  padding-bottom: 50px;
+  border-bottom-right-radius: 15px;
+ }
+
+ .Hero__right{
+  background-color: white;
+  grid-row: 2/3;
+  padding-bottom: 20px;
+  border-bottom-left-radius: 15px;
+  padding-left: 0;
+  align-items: center;
+  padding-top: 20px;
+ }
+
+ .Hero__img-responsive{
+  width: 100vw;
+ }
+
+ .Hero__left .Hero__left-title{
+  width: 80%;
+ }
+
+ .Hero__left .Hero__left-description{
+  width: 80%;
+ }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import Media from 'react-media';
 
 import Button from './Button';
 
@@ -8,7 +9,7 @@ import handHello from '../images/handHello.png';
 import eficienciaIcon from '../images/eficienciaIcon.png';
 import arbitraje from '../images/arbitraje.png';
 import calidadIcon from '../images/calidadIcon.png';
-
+import handHelloLittle from '../images/handHelloLittle.png';
 
 class Hero extends React.Component{
   
@@ -25,6 +26,11 @@ class Hero extends React.Component{
     return(
       <>
         <div className="Hero">
+          <Media query="(max-width: 850px)" render={() =>
+            (
+              <img className="Hero__img-responsive" src={handHelloLittle}></img>
+            )}
+          />
           <img className="Hero-triangle"  src={triangleHero} alt=""/>
           <div className="Hero-decorate">
             <div className="Hero-decorate-left"></div>
