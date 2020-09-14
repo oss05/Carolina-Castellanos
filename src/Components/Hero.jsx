@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Button from './Button';
+
 import './styles/Hero.scss';
 import triangleHero from '../images/triangleHero.png';
 import handHello from '../images/handHello.png';
@@ -24,6 +26,10 @@ class Hero extends React.Component{
       <>
         <div className="Hero">
           <img className="Hero-triangle"  src={triangleHero} alt=""/>
+          <div className="Hero-decorate">
+            <div className="Hero-decorate-left"></div>
+            <div className="Hero-decorate-right"></div>
+          </div>
           <div className="Hero__left">
             <img className="Hero-hand" src={handHello} alt=""/>
             <h1 className="Hero__left-title">
@@ -32,6 +38,7 @@ class Hero extends React.Component{
             <p className="Hero__left-description">
               {this.state.description}
             </p>
+            <Button message='view more'/>
           </div>
           <div className="Hero__right">
             <img src={calidadIcon} alt="" className="Hero__right-item"/>

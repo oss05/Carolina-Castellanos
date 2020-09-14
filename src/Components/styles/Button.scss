@@ -9,9 +9,11 @@
   border-radius: 15px;
   border: 2px solid $color-greenBig;
   cursor: pointer;
+  
   & p{
-    margin: 0;
     padding: 0;
+    margin: 0;
+    width: 100%;
     font-family:  $font-raleway;
     font-weight: bold;
     font-size: 1.2rem;

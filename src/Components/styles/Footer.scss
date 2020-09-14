@@ -16,12 +16,14 @@
             list-style: none;
             & li{
                 float: left;
+                padding-right: 15px;
+                border-right: 2px solid white;
                 & a{
                     text-decoration: none;
                     color: white;
                     font-family: $font-roboto;
                     font-weight: 500;
-                    line-height: 20px;
+                    line-height: 50px;
                     font-size: 1.2rem;
                 }
             }
