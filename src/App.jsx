@@ -28,7 +28,15 @@ class App extends React.Component {
           },
           homeMain:{
            carrerButton: 'Ver Trayectoria',
-          services: 'Servicios',
+           services: 'Servicios',
+           experienceTitle: 'Experiencia impartiendo clases y conferencias en'
+          },
+          footer:{
+           opc1: 'Inicio',
+           opc2: 'Trayectoria',
+           opc3: 'Servicios',
+           opc4: 'contacto',
+           social: 'Únete a la conversación',
           }
         },
         en:{
@@ -48,6 +56,14 @@ class App extends React.Component {
          homeMain:{
           carrerButton: 'View Carrer Path',
           services: 'Services',
+          experienceTitle: 'Experience teaching classes and conferences in:'
+         },
+         footer:{
+          opc1: 'Home',
+          opc2: 'Carrer Path',
+          opc3: 'Services',
+          opc4: 'Contact',
+          social: 'Join the conversation',
          }
         }
       }  
@@ -84,6 +100,7 @@ render(){
       <Switch>
         <Layout 
         state={this.state.language}
+        language={this.sendData()}
         languageSignal={this.languageSignal}
         >
           <Route exact path="/consultoria-carolina/" render={

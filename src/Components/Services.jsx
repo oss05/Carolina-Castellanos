@@ -8,11 +8,27 @@ import justiciaRectangle from '../images/justiciaRectangle.png';
 
 
 
-const Services = () => {
+class Services extends React.Component {
+ 
+ constructor(props){
+  super(props)
+  this.state={
+   services: props.state.homeMain.services,
+  }
+ }
+
+ componentWillReceiveProps(nextProps){
+  this.setState({
+   ...this.state,
+   services: nextProps.state.homeMain.services,
+  })
+ }
+
+ render(){
   return (
     <section className="Services">
       <div className="Services__title">
-        <div>Services </div>
+        <div>{this.state.services} </div>
         <div className="Services__decorate"></div>
       </div>
       <div className="Services__icons">
@@ -33,6 +49,8 @@ const Services = () => {
       </div>
     </section>
   )
+
+ }
 }
 
 export default Services;

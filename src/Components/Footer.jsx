@@ -8,19 +8,19 @@ import linkedlnFooter from '../images/linkedlnFooter.png';
 
 import './styles/Footer.scss';
 
-const Footer = () => {
+const Footer = (props) => {
     return (
         <div className="Footer">
             <div className="Footer__menu">
                 <ul>
-                    <li> <Link to="/" > Inicio </Link> </li>
-                    <li> <Link to="/" >Experiencia </Link> </li>
-                    <li> <Link to="/" > Servicios </Link> </li>
-                    <li> <Link to="/" > Contacto </Link> </li>
+                    <li> <Link to="/" > {props.language.footer.opc1} </Link> </li>
+                    <li> <Link to="/" > {props.language.footer.opc2} </Link> </li>
+                    <li> <Link to="/" > {props.language.footer.opc3} </Link> </li>
+                    <li> <Link to="/" > {props.language.footer.opc4} </Link> </li>
                 </ul>
             </div>
             <div className="Footer__others">
-                <li> <Link to="/" > Unete a la conversación </Link> </li>
+                <li> <Link to="/" > {props.language.footer.social} </Link> </li>
                 <div className="Footer__others-social">
                  <img src={youtubeFooter} alt=""/>
                  <img src={facebookFooter} alt=""/>

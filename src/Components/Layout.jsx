@@ -10,7 +10,7 @@ const Layout = (props) => {
         languageSignal={props.languageSignal}
         />
         {props.children}
-        <Footer />
+        <Footer language={props.language}/>
     </React.Fragment>
     )
 }

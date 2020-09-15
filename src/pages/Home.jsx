@@ -25,7 +25,7 @@ constructor(props){
  super(props)
  this.state={
   carrerButton: props.state.homeMain.carrerButton,
-  
+  experienceTitle: props.state.homeMain.experienceTitle,  
  }
 }
 
@@ -34,7 +34,7 @@ componentWillReceiveProps(nextProps){
  this.setState({
   ...this.state,
   carrerButton: nextProps.state.homeMain.carrerButton,
-
+  experienceTitle: nextProps.state.homeMain.experienceTitle,
  })
 }
 
@@ -72,7 +72,9 @@ render(){
            <Button message={this.state.carrerButton} />
        </div>
       </div>
-      <Services/>
+      <Services
+      state={this.props.state}
+      />
      </div>
    </section>
       
@@ -81,7 +83,7 @@ render(){
        <div className="Home__decorate-bottom-right"></div>
    </div>
    <section className="Home__teacher-in">
-       <h5 className="Home__teacher-in-title" >Experiencia impartiendo clases y conferencias en </h5>
+       <h5 className="Home__teacher-in-title" > {this.state.experienceTitle} </h5>
        <div className="Home__teacher-in-list">
            <div className="Home__teacher-in-item">
                <img src={esij} alt=""/>
