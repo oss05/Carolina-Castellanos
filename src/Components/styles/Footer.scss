@@ -61,12 +61,13 @@
 
 @media screen and(max-width: 1000px){
     .Footer{
+     
      display: grid;
-     grid-template-columns: 80%;
+     grid-template-columns: 100%;
      grid-template-rows: auto auto;
      align-items: initial;
      justify-content: initial;
-     padding-left: 10%;
+     justify-items: center;
      
      & .Footer__menu{
       @include flexbox(center,center,column);
