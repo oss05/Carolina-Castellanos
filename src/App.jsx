@@ -46,7 +46,7 @@ render(){
         <Layout 
         state={this.state.language}
         >
-          <Route exact path="/" render={
+          <Route exact path="/consultoria-carolina" render={
             ()=> {
               return (
                 <Home
