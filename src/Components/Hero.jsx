@@ -16,13 +16,25 @@ class Hero extends React.Component{
   constructor(props){
     super(props)
     this.state={
-      language: props.state.es.language,
-      title: props.state.es.hero.title,
-      description: props.state.es.hero.description,
+      language: props.state.language,
+      title: props.state.hero.title,
+      description: props.state.hero.description,
+      viewMore: props.state.hero.viewMore,
     }
   }
 
+  componentWillReceiveProps(nextProps){
+   this.setState({
+    ...this.state,
+    language: this.props.state.language,
+    title: this.props.state.hero.title,
+    description: this.props.state.hero.description,
+    viewMore: this.props.state.hero.viewMore,
+   })
+  }
+
   render(){
+   
     return(
       <>
         <div className="Hero">
@@ -44,7 +56,7 @@ class Hero extends React.Component{
             <p className="Hero__left-description">
               {this.state.description}
             </p>
-            <Button message='view more'/>
+            <Button message={this.state.viewMore}/>
           </div>
           <div className="Hero__right">
             <img src={calidadIcon} alt="" className="Hero__right-item"/>

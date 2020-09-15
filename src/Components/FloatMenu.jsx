@@ -31,8 +31,10 @@ class FloatMenu extends React.Component {
   }
 
   handleLaguage(){
+   
     const language = this.props.state
     if(this.state.menu.language==='En'){
+      this.props.languageSignal('Es')
       this.setState({
         menu: {
           ...this.state.menu,
@@ -48,6 +50,7 @@ class FloatMenu extends React.Component {
       })
       
     }else{
+     this.props.languageSignal('En')
       this.setState({
         menu: {
           ...this.state.menu,
@@ -142,7 +145,7 @@ class FloatMenu extends React.Component {
               <div className="FloatMenu__block-details-right">
                 <div> {this.state.menu.nav.languageReference} </div>
                 <div
-                onClick={() => { this.handleLaguage() }}
+                onClick={() => { this.handleLaguage()} }
                 > 
                 {this.state.menu.language} 
                 </div>

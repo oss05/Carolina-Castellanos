@@ -6,7 +6,9 @@ import Footer from './Footer';
 const Layout = (props) => {
     return (
     <React.Fragment>
-        <Navbar state={props.state}/>
+        <Navbar state={props.state}
+        languageSignal={props.languageSignal}
+        />
         {props.children}
         <Footer />
     </React.Fragment>

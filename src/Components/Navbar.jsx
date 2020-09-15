@@ -17,6 +17,7 @@ const Navbar = (props) =>{
                 <div className="Navbar__menu">
                     <FloatMenu
                     state={props.state}
+                    languageSignal={props.languageSignal}
                     />
                 </div>
             </div>
