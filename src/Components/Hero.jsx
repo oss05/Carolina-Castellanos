@@ -24,12 +24,13 @@ class Hero extends React.Component{
   }
 
   componentWillReceiveProps(nextProps){
+   // console.log('recibiendo actualizacion', nextProps)
    this.setState({
     ...this.state,
-    language: this.props.state.language,
-    title: this.props.state.hero.title,
-    description: this.props.state.hero.description,
-    viewMore: this.props.state.hero.viewMore,
+    language: nextProps.state.language,
+    title: nextProps.state.hero.title,
+    description: nextProps.state.hero.description,
+    viewMore: nextProps.state.hero.viewMore,
    })
   }
 

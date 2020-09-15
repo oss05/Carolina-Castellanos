@@ -25,6 +25,10 @@ class App extends React.Component {
             title: 'Consultoría en Solución Alternativa de Controversias',
             description: 'Gestión y solución alternativa de controversias comerciales por medio de procesos de mediación y arbitraje',
             viewMore: 'ver más',
+          },
+          homeMain:{
+           carrerButton: 'Ver Trayectoria',
+          services: 'Servicios',
           }
         },
         en:{
@@ -40,6 +44,10 @@ class App extends React.Component {
            title: 'Consultancy in Aternative Dispute Resolution',
            description: 'Management nad dispute resolution of commercial disputes through mediation and arbitration processes',
            viewMore: 'view more',
+         },
+         homeMain:{
+          carrerButton: 'View Carrer Path',
+          services: 'Services',
          }
         }
       }  
@@ -47,23 +55,26 @@ class App extends React.Component {
 }
 
 languageSignal = (a) =>{
- 
+ // console.log('mandondo señar para poner '+a)
  this.setState({
   language: {
    ...this.state.language,
    actual: a,
   }
  })
- this.render()
+ 
 }
 
 sendData = () => {
+ 
  if(this.state.language.actual==='En'){
-  console.log('es')
-  return this.state.language.es
- }else if(this.state.language.actual==='Es'){
-  console.log('en')
+  // console.log('entre al cargar la pagina')
+  // console.log('en')
   return this.state.language.en
+ }else if(this.state.language.actual==='Es'){
+  // console.log('entre para cambiar de idioma')
+  // console.log('es')
+  return this.state.language.es
  }
 }
 

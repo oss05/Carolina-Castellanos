@@ -24,8 +24,18 @@ class Home extends React.Component{
 constructor(props){
  super(props)
  this.state={
-
+  carrerButton: props.state.homeMain.carrerButton,
+  
  }
+}
+
+componentWillReceiveProps(nextProps){
+ // console.log('recibiendo actualizacion', nextProps)
+ this.setState({
+  ...this.state,
+  carrerButton: nextProps.state.homeMain.carrerButton,
+
+ })
 }
 
 render(){
@@ -59,7 +69,7 @@ render(){
        </div>
        <div className="Home__main-right-profile-details">
            <h1 className="Home__main-right-profile-data">Carolina Castellanos López<br/><span>Abogada Consultora</span> </h1>
-           <Button message="Carrer Path" />
+           <Button message={this.state.carrerButton} />
        </div>
       </div>
       <Services/>
