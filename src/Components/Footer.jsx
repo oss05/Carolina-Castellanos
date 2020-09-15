@@ -1,5 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+
+import facebookFooter from '../images/facebookFooter.png';
+import youtubeFooter from '../images/youtubeFooter.png';
+import twitterFooter from '../images/twitterFooter.png';
+import linkedlnFooter from '../images/linkedlnFooter.png';
+
 import './styles/Footer.scss';
 
 const Footer = () => {
@@ -14,7 +20,13 @@ const Footer = () => {
                 </ul>
             </div>
             <div className="Footer__others">
-                <i> <Link to="/" > Unete a la conversación </Link> </i>
+                <li> <Link to="/" > Unete a la conversación </Link> </li>
+                <div className="Footer__others-social">
+                 <img src={youtubeFooter} alt=""/>
+                 <img src={facebookFooter} alt=""/>
+                 <img src={twitterFooter} alt=""/>
+                 <img src={linkedlnFooter} alt=""/>
+                </div>
             </div>
         </div>
     )

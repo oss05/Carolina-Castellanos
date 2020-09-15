@@ -172,6 +172,28 @@
 }
 
 @media screen and(max-width: 830px){
+ .Home__teacher-in-title{
+  font-size: 1rem;
+ }
+
+ .Home__teacher-in-list{
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: 100%;
+  grid-column-gap: 2%;
+
+  & .Home__teacher-in-item:nth-of-type(4){
+   display: none;
+  }
+  & .Home__teacher-in-item:nth-of-type(5){
+   display: none;
+
+  }
+  & .Home__teacher-in-item:nth-of-type(6){
+   display: none;
+
+  }
+ }
 
  .Home__main{
   grid-template-columns: 100%;
