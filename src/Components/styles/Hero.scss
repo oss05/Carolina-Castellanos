@@ -161,9 +161,29 @@
 
  .Hero__left .Hero__left-title{
   width: 80%;
+  font-size: 1.2rem;
  }
 
  .Hero__left .Hero__left-description{
   width: 80%;
+  font-size: 0.8rem;
+ }
+}
+
+@media screen and (max-width: 850px){
+ .Hero{
+  grid-template-columns: 70% 30%;
+
+ }
+
+ .Hero__left{
+  padding-top: 5px;
+  padding-left: 3%;
+  padding-right: 3%;
+
+ }
+
+ .Hero__left .Hero__left-description{
+  margin-bottom: 20px;
  }
 }

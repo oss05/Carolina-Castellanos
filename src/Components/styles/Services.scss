@@ -71,3 +71,47 @@
     }
   }
 }
+
+
+@media screen and(max-width: 830px){
+
+ .Services{
+  // border: 1px solid black;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 1fr;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 100px;
+ }
+
+ .Services .Services__title{
+  grid-column:1/2 ;
+  grid-row: 1/2;
+  transform: none;
+  padding: 0;
+  padding-left: 5%;
+ }
+
+ .Services .Services__icons{
+  // border: 1px solid red;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  @include flexbox(center,center,column);
+ }
+
+ .Services .Services__icons{
+  position: relative;
+ }
+ .Services__icons-decorate{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: #255429;
+  right: 0;
+  z-index: -1;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  opacity: 0.5;
+ }
+}
+

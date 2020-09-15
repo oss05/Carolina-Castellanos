@@ -12,6 +12,10 @@ import unam from '../images/unam.png';
 import up from '../images/up.png';
 import homeMainDecorate from '../images/homeMainDecorate.png';
 import carolina from '../images/carolina.png';
+import facebookGrey from '../images/facebookGrey.png';
+import twitterGrey from '../images/twitterGrey.png';
+import linkedlnGrey from '../images/linkedlnGrey.png';
+import moreGrey from '../images/moreGrey.png';
 
 import './styles/Home.scss';
 
@@ -35,9 +39,23 @@ render(){
      <div className="Home__main-right">
       <div className="Home__main-right-profile">
        <div className="Home__main-right-profile-img">
-           <div className="Home__main-right-profile-bottom"></div>
-           <div className="Home__main-right-profile-left"></div>
-           <img className="Home__main-right-caro" src={carolina} alt=""/>
+        <div className="Home__main-right-profile-social">
+         <a href="/">
+          <img src={facebookGrey} alt=""/>
+         </a>
+         <a href="/">
+          <img src={twitterGrey} alt=""/>
+         </a>
+         <a href="/">
+          <img src={linkedlnGrey} alt=""/>
+         </a>
+         <a href="/">
+          <img src={moreGrey} alt=""/>
+         </a>
+        </div>
+        <div className="Home__main-right-profile-bottom"></div>
+        <div className="Home__main-right-profile-left"></div>
+        <img className="Home__main-right-caro" src={carolina} alt=""/>
        </div>
        <div className="Home__main-right-profile-details">
            <h1 className="Home__main-right-profile-data">Carolina Castellanos López<br/><span>Abogada Consultora</span> </h1>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Media from 'react-media';
 
 import './styles/Services.scss';
 import mediacionRectangle from '../images/mediacionRectangle.png';
@@ -15,6 +16,11 @@ const Services = () => {
         <div className="Services__decorate"></div>
       </div>
       <div className="Services__icons">
+       <Media query="(max-width: 830px)"
+       render={ () => (
+        <div className="Services__icons-decorate" ></div>
+       ) }
+       />
         <div className="Services__icons-1">
           <img src={mediacionRectangle} alt=""/>
         </div>

@@ -68,6 +68,7 @@
   display: grid;
   grid-template-columns: 40% 60%;
   grid-template-rows: 100%;
+  margin-left: 250px;
 }
 
 .Home__main-right-profile-img{
@@ -92,12 +93,25 @@
     border-radius: 0px 0px 20px 0px;
   }
 
+  & .Home__main-right-profile-social{
+   // border: 1px solid black;
+   position: absolute;
+   width: 20%;
+   height: 80%;
+   left: -30%;
+   top: 10%;
+   @include flexbox(center,center,column);
+   & a{
+    margin-bottom: 5px;
+   }
+  }
+
   & .Home__main-right-profile-left{
     // border: 1px solid black;
     position: absolute;
-    width: 120%;
+    width: 220%;
     height: 120%;
-    left: -80%;
+    left: -165%;
     top: -10%;
     z-index: -1;
     
@@ -143,6 +157,104 @@
   }
 }
 
+@media screen and (max-width: 1250px){
+ .Home__main-right-profile{
+  margin-left: 200px;
+  margin-bottom: 100px;
+ }
+}
+
 @media screen and (max-width: 1100px){
+ .Home__main-right-profile{
+  margin-left: 100px;
+ }
+}
+
+@media screen and(max-width: 830px){
+
+ .Home__main{
+  grid-template-columns: 100%;
+  margin-top: 100px;
+ }
+
+
+ .Home__main-img{
+  display: none;
   
+ }
+
+ .Home__main-right{
+  grid-column: 1/2;
+  align-items: flex-start;
+  padding: 0;
+  padding: 10%;
+  padding-right: 0;
+  padding-left: 10%;
+ }
+
+ .Home__main-right-profile{
+  width: 70%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.5fr;
+  margin-left: 0;
+  // padding-left: 5vw;
+  // padding-right: 5vw;
+ }
+
+ .Home__main-right-profile-img{
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-left: 40px;
+ }
+
+ .Home__main-right-profile-details{
+  margin-top: 100px;
+  grid-column: 1/2;
+  grid-row: 2/3;
+ }
+
+ .Home__main-right-profile-img .Home__main-right-profile-left{
+  width: 150%;
+  left: -100%;
+ }
+
+ .Home__main-right-profile-img .Home__main-right-profile-social{
+  left: -25%;
+ }
+}
+
+@media screen and(max-width: 450px){
+
+
+ .Home__main-right-profile{
+  width: 85%;
+  text-align: end;
+ }
+
+ .Home__main-right-profile-img .Home__main-right-profile-social{
+  left: -5%;
+ }
+
+ .Home__main-right-profile-img .Home__main-right-caro{
+  width: 80%;
+ }
+
+ .Home__main-right-profile-img .Home__main-right-profile-bottom{
+  right: -5%;
+ }
+
+ 
+ .Home__main-right-profile-details .Home__main-right-profile-data{
+  text-align: initial;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+ }
+
+ .Home__main-right-profile-img .Home__main-right-profile-left{
+  left: -80%;
+ }
+
+ .Home__main-right-profile-img{
+  margin-left: 0px;
+ }
 }

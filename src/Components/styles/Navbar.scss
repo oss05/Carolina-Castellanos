@@ -6,8 +6,7 @@
     // @include border-test(blue);
     @include flexbox(space-between);
     width: 90vw;
-    height: auto;
-    max-height: 20vh;
+    max-height: 200px;
     padding-left: 5vw;
     padding-right: 5vw;
 }
@@ -31,8 +30,8 @@
 .Navbar__menu{
     // @include border-test(black);
     @include flexbox(flex-end);
-    width: 60%;
-    height: 95%;
+    width: 5%;
+    height: 5px;
 
 }
 
@@ -49,16 +48,23 @@
 
 }
 
-@media screen and(max-width: 850px){
-    .Navbar__logo{
-        width: 60%;
-    }
 
+@media screen and(max-width: 800px){
+ .Navbar__menu{
+  width: 20%;
+ }
+ .Navbar{
+  max-height: 110px;
+  padding: 0 2vw;
+ }
+ .Navbar__logo{
+     width: 60%;
+ }
 }
 
-@media screen and(max-width: 600px){
-    .Navbar__logo{
-        width: 80%;
-    }
+@media screen and(max-width: 500px){
 
+ .Navbar__logo{
+     width: 90%;
+ }
 }
