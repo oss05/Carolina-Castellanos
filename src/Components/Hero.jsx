@@ -28,7 +28,7 @@ class Hero extends React.Component{
         <div className="Hero">
           <Media query="(max-width: 850px)" render={() =>
             (
-              <img className="Hero__img-responsive" src={handHelloLittle}></img>
+              <img className="Hero__img-responsive" src={handHelloLittle} alt="saludo de manos"></img>
             )}
           />
           <img className="Hero-triangle"  src={triangleHero} alt=""/>

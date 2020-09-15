@@ -35,7 +35,7 @@ class FloatMenu extends React.Component {
     if(this.state.menu.language==='En'){
       this.setState({
         menu: {
-          ... this.state.menu,
+          ...this.state.menu,
           language: language.es.language,
           nav: {
             menu1: language.es.nav.menu1,
@@ -50,7 +50,7 @@ class FloatMenu extends React.Component {
     }else{
       this.setState({
         menu: {
-          ... this.state.menu,
+          ...this.state.menu,
           language: language.en.language,
           nav: {
             menu1: language.en.nav.menu1,
@@ -70,7 +70,7 @@ class FloatMenu extends React.Component {
     if(!this.state.menu.isActive){
       this.setState({
         menu: {
-          ... this.state.menu,
+          ...this.state.menu,
           isActive: true
         }
       });
@@ -79,7 +79,7 @@ class FloatMenu extends React.Component {
     }else{
       this.setState({
         menu: {
-          ... this.state.menu,
+          ...this.state.menu,
           isActive: false
         }
       });
