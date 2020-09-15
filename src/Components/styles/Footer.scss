@@ -5,6 +5,7 @@
     // @include border-test(blue);
     @include flexbox(center,flex-start);
     width: 100vw;
+    overflow-x: hidden;
     padding: 10px 0 70px 0;
     background-color: $color-greenBig;
     & .Footer__menu{

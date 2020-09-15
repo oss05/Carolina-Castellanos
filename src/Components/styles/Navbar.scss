@@ -5,6 +5,7 @@
 .Navbar{
     // @include border-test(blue);
     @include flexbox(space-between);
+    overflow-x: hidden;
     width: 90vw;
     max-height: 200px;
     padding-left: 5vw;
