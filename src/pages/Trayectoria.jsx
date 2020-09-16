@@ -23,7 +23,9 @@ class Trayectoria extends React.Component{
  componentDidMount(){
   const details = document.getElementById('details-carrer')
   details.innerHTML=this.props.data.details
-  if(visualViewport>750){
+  
+  if(visualViewport.width>750){
+   console.log('entreee')
    this.props.differNav(this.state.activar)
   }else{
    this.props.differNav(false)
@@ -48,6 +50,7 @@ class Trayectoria extends React.Component{
   return(
    
    <>
+   
    <section className="Trayectoria">
     <Media query="(max-width: 750px)" 
     onChange={(e) => {
@@ -71,9 +74,9 @@ class Trayectoria extends React.Component{
           {
            
            return (
-            
-            <div className="Trayectoria-container">
+            <>
             <GreenDecorate message="trayectoria" />
+            <div className="Trayectoria-container">
             <div className="Trayectoria__profile" >
              <div className="Trayectoria__profile-social" >
              <img src={Facebook} alt=""/>
@@ -92,6 +95,7 @@ class Trayectoria extends React.Component{
             <h3 className="Trayectoria__little-title"> {this.props.data.trayectoria.title} </h3>
             <p className="Trayectoria__little-details" id="details-carrer">  </p>
            </div>
+           </>
              )
           } }
     />
