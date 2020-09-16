@@ -7,7 +7,6 @@ import crossIcon from '../images/crossIcon.png';
 import triangle from '../images/triangle.png';
 import adressImg from '../images/adressImg.png';
 
-
 import './styles/FloatMenu.scss';
 
 class FloatMenu extends React.Component {
@@ -127,7 +126,7 @@ class FloatMenu extends React.Component {
                   </Link>
                 </li>
                 <li className="FloatMenu__block-menu-item">
-                  <Link to="/" >{this.state.menu.nav.menu3}
+                  <Link to="/acerca-de/" >{this.state.menu.nav.menu3}
                   <img className="FloatMenu__block-menu-triangle" src={triangle} alt="triangle"/>
                   </Link>
                 </li>

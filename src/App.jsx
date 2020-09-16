@@ -4,6 +4,7 @@ import { BrowserRouter , Switch , Route } from 'react-router-dom';
 import Layout from './Components/Layout';
 import Home from './pages/Home';
 import Trayectoria from './pages/Trayectoria';
+import About from './pages/About';
 
 class App extends React.Component {
 
@@ -39,6 +40,12 @@ class App extends React.Component {
            opc4: 'contacto',
            social: 'Únete a la conversación',
           },
+          about: {
+           titleLittle: '¿Qué son los MASC? ',
+           descriptionLittle: '•	Son Mecanismos Alternativos de Solución de Controversias. Por mecanismos nos referimos a procesos, procedimientos o métodos',
+           title: 'Alternativos, ¿a qué?',
+           description: '•	A los procesos jurisdiccionales o procesos tradicionales de impartición de justicia por los cuales una autoridad competente es quien conoce y resuelve la controversia que se le plantea.<br/><br/>Ejemplos de los <span>MASC</span> son la mediación y el arbitraje.<br/><br/><span>•	La mediación</span>es un proceso en el que un tercero facilitador (que no es un juez ni un árbitro) auxilia profesionalmente a las partes involucradas en una controversia en materia familiar, civil, comercial, entre otras, con el propósito de que sean ellas mismas quienes resuelvan su conflicto y, con ello, satisfagan sus respectivas necesidades. <br/><br/>Es una negociación asistida por un tercero neutral: el mediador o facilitador.<br/><br/>Una mediación exitosa nos permite evitar un juicio o un arbitraje, o poner fin a un juicio o arbitraje que ya hubiere sido iniciado por una de las partes. <br/><br/>Las controversias que podemos resolver en una mediación son casi todas aquellas derivadas de conflictos familiares, civiles y comerciales relacionados con un incumplimiento contractual. En general, casi cualquier tipo de materias son susceptibles de sujetarse a procesos de mediación y conciliación.<br/><br/><span>•	El arbitraje es un proceso</span> en el cual un árbitro (que no es un juez) conoce y resuelve de manera definitiva y vinculante las controversias existentes entre las partes involucradas, derivadas de un contrato o relación comercial entre ellas.<br/><br/>Las controversias que se pueden resolver por medio de un arbitraje son aquellas de naturaleza mercantil o comercial; por ejemplo, incumplimientos contractuales y lo que de ello derive jurídicamente.<br/><br/>La resolución del árbitro, el laudo, tiene la misma fuerza legal que la sentencia dictada por un juez.',
+          },
           trayectoria:{
            sendButton: 'Enviar Mensaje',
            title: 'Semblanza Profesional',
@@ -70,6 +77,12 @@ class App extends React.Component {
           opc3: 'Services',
           opc4: 'Contact',
           social: 'Join the conversation',
+         },
+         about: {
+          titleLittle: 'What is ADR? ',
+          descriptionLittle: '•	By ADR we refer to Alternative Dispute Resolution Mechanisms. By mechanisms we mean processes, such as mediation and arbitration.',
+          title: 'Alternative, to what?',
+          description: '•	To the traditional and jurisdictional processes by which a competent authority knows and resolves the dispute that arises.<br/><br/>Mediation and arbitration are examples of ADR<br/><br/><span>•	Mediation</span> is a process in which a third-party facilitator (who is not a judge nor an arbitrator) professionally assist the parties involved in a dispute in family, civil and commercial matters, among others, with the purpose that they be the ones who resolve their dispute, and by doing that, they will meet their respective needs. <br/><br/> It is a negotiation assisted by a neutral third party: the mediator or facilitator.<br/><br/> A successful mediation allows us to avoid a trial or an arbitration, or to end the lawsuit or arbitration that has been initiated by one of the parties.  <br/><br/> The disputes that can be resolved in a mediation are those derived from familiar, civil and commercial conflicts related to a breach of contract.  In general, almost any type of matter can be subject to mediation and conciliation procedures.<br/><br/><span>•	Arbitration</span>    is a process in which an arbitrator (who is not a judge) knows and resolves any disputes arising from a contract or business relationship, in a final and binding way.<br/><br/> The disputes that can be resolved in an arbitration are those of a commercial nature, for example, contractual breaches and what legally derives from it.<br/><br/> The resolution issued by the arbitrator, the award, has the same legal force than the sentence rendered by a judge.',
          },
          trayectoria:{
           sendButton: 'Send Message',
@@ -143,6 +156,17 @@ render(){
            )
           }
          }
+         />
+         <Route exact path="/acerca-de/" render={
+          () => {
+           return (
+            <About 
+            differNav={this.differNav}
+            data={this.sendData()}
+            />
+           )
+          }
+         } 
          />
         </Layout>
       </Switch>
