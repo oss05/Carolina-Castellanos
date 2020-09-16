@@ -175,6 +175,11 @@
    color: #919292;
    font-family: $font-roboto;
    font-size: 1.2rem;
+   & span{
+    color: #1F3B21;
+    font-weight: bold;
+    font-size: 1.3rem;
+   }
   }
  }
 }
