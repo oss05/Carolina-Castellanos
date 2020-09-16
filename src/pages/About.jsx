@@ -1,5 +1,6 @@
 import React from 'react';
-
+import Media from 'react-media';
+import GreenDecorate from '../Components/GreenDecorate';
 import writeAbout from '../images/writeAbout.png';
 import './styles/About.scss';
 
@@ -39,11 +40,36 @@ class About extends React.Component{
  render(){
   return (
    <>
+   <Media query="(max-width: 750px)" 
+    onChange={(e) => {
+     if(this.state.activar===true  && e){
+      console.log('me des-active',e)
+      this.props.differNav(false)
+      this.setState({
+       ...this.state.details,
+       activar: false,
+      })
+     }else if(this.state.activar===false && !e){
+      console.log('me active')
+      this.props.differNav(true)
+      this.setState({
+       ...this.state.details,
+       activar: true,
+      })
+     }
+    }}
+    render={() => (
+     <GreenDecorate />
+    )}
+    />
+
     <div className="About">
     <section className="About-container">
      <div className="About__img">
+      <div>
       <img src={writeAbout} alt=""/>
       <div></div>
+      </div>
      </div>
      <div className="About__littleDescription">
       <div>
