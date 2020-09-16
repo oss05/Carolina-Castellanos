@@ -117,12 +117,12 @@ class FloatMenu extends React.Component {
             <div className="FloatMenu__block-nav">
               <ul className="FloatMenu__block-menu">
                 <li className="FloatMenu__block-menu-item">
-                  <Link to="/" >{this.state.menu.nav.menu1}
+                  <Link to="/consultoria-carolina" >{this.state.menu.nav.menu1}
                   <img className="FloatMenu__block-menu-triangle" src={triangle} alt="triangle"/>
                   </Link>
                 </li>
                 <li className="FloatMenu__block-menu-item">
-                  <Link to="/" >{this.state.menu.nav.menu2}
+                  <Link to="/trayectoria/" >{this.state.menu.nav.menu2}
                   <img className="FloatMenu__block-menu-triangle" src={triangle} alt="triangle"/>
                   </Link>
                 </li>

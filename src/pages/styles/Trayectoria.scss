@@ -1,0 +1,173 @@
+@import '../../sassUtils/vars.scss';
+@import '../../sassUtils/mixins.scss';
+
+.Trayectoria{
+ width: 100vw;
+ // border: 1px solid black;
+ display: grid;
+ grid-template-columns: 20% 80%;
+ grid-template-rows: auto;
+
+ & .Tayectoria__left{
+  // border: 1px solid black;
+  grid-column: 1/2;
+  @include flexbox(flex-start,center, column);
+  padding-top: 35px;
+  & .Trayectoria__left-img{
+   margin-bottom: 35px;
+   width: 90%;
+   & img{
+    width: 100%;
+   }
+  }
+ }
+
+ & .Trayectoria__right{
+  // border: 1px solid black;
+  grid-column: 2/3;
+  padding: 55px 5%;
+
+  & .Trayectoria__right-name{
+   font-family: $font-monserrat;
+   font-size: 3rem;
+   color: #212121;
+   font-weight: bold;
+   margin: 0;
+  }
+
+  & .Trayectoria__right-job{
+   margin: 0;
+   font-family: $font-monserrat;
+   font-size: 1.5rem;
+   color: #838C8D;
+   font-weight: normal;
+   line-height: 50px;
+  }
+
+  & .Trayectoria__right-social{
+   width: 30%;
+   @include flexbox(flex-start);
+   margin-top: 10px;
+   margin-bottom: 50px;
+   & img{
+    margin-right: 50px;
+   }
+  }
+
+  & .Trayectoria__right-title{
+   font-family: $font-raleway;
+   font-weight: bold;
+   font-size: 1.8rem;
+   margin: 0;
+
+  }
+
+  & .Trayectoria__right-details{
+   color: #919292;
+   font-family: $font-roboto;
+   font-size: 1.2rem;
+  }
+ }
+}
+
+@media screen and(max-width: 1050px){
+ .Trayectoria{
+  grid-template-columns: 30% 70%;
+ }
+}
+
+@media screen and(max-width: 750px){
+ .Trayectoria{
+  // border: 1px solid red;
+  width: 100vw;
+  grid-template-columns: 100%;
+
+  & .Tayectoria__left{
+   display: none;
+
+  }
+
+  & .Trayectoria__right{
+   display: none;
+
+  }
+
+  & .Trayectoria-container{
+   padding: 5% 5%;
+  }
+
+  & .Trayectoria__profile{
+   // border: 1px solid red;
+   width: 100%;
+   @include flexbox();
+   margin-bottom: 20px;
+   margin-top: 50px;
+
+
+  }
+  & .Trayectoria__profile-social{
+   // border: 1px solid red;
+   height: auto;
+   @include flexbox(center,center,column);
+   & img{
+    margin-bottom: 50px;
+   }
+
+  }
+  & .Trayectoria__profile-img{
+   // border: 1px solid red;
+   width: 100%;
+   @include flexbox();
+   
+  }
+
+  & .Trayectoria__little-name{
+   font-family: $font-monserrat;
+   font-size: 1.4rem;
+   color: #212121;
+   font-weight: bold;
+   margin: 0;
+   line-height: 30px;
+  }
+
+  & .Trayectoria__little-job{
+   margin: 0;
+   font-family: $font-monserrat;
+   font-size: 1.4rem;
+   color: #838C8D;
+   font-weight: normal;
+   line-height: 30px;
+   margin-bottom: 50px;
+  }
+
+  & .Trayectoria__little-button{
+   @include flexbox();
+   margin-bottom: 50px;
+
+  }
+
+  & .Trayectoria__little-social{
+   width: 30%;
+   @include flexbox(flex-start);
+   margin-top: 10px;
+   margin-bottom: 50px;
+   & img{
+    margin-right: 50px;
+   }
+  }
+
+  & .Trayectoria__little-title{
+   font-family: $font-raleway;
+   font-weight: bold;
+   font-size: 1.3rem;
+   margin: 0;
+
+  }
+
+  & .Trayectoria__little-details{
+   color: #919292;
+   font-family: $font-roboto;
+   font-size: 1rem;
+  }
+ }
+}

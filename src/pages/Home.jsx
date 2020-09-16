@@ -38,6 +38,10 @@ componentWillReceiveProps(nextProps){
  })
 }
 
+componentDidMount(){
+ this.props.differNav(false)
+}
+
 render(){
  return (
   <div className="Home">

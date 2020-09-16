@@ -8,6 +8,7 @@ const Layout = (props) => {
     <React.Fragment>
         <Navbar state={props.state}
         languageSignal={props.languageSignal}
+        valor={props.valor}
         />
         {props.children}
         <Footer language={props.language}/>
