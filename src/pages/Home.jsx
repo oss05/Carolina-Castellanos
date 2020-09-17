@@ -30,6 +30,7 @@ constructor(props){
 }
 
 componentWillReceiveProps(nextProps){
+
  // console.log('recibiendo actualizacion', nextProps)
  this.setState({
   ...this.state,
@@ -39,10 +40,13 @@ componentWillReceiveProps(nextProps){
 }
 
 componentDidMount(){
+
  this.props.differNav(false)
 }
 
 render(){
+ console.log('recibo '+this.props.state)
+
  return (
   <div className="Home">
    <Hero 

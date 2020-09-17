@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter , Switch , Route } from 'react-router-dom';
 
 import Layout from './Components/Layout';
+import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Trayectoria from './pages/Trayectoria';
 import About from './pages/About';
@@ -27,6 +28,17 @@ class App extends React.Component {
             languageReference: 'Idioma',
             greenDecorateMessage: 'a',
             greenDecorateImg: null,
+          },
+          contact: {
+           title: 'Contactame',
+           details: 'Te aseguro que encontraremos la mejor solución',
+           name: 'Nombre',
+           yourName: 'Tú nombre',
+           email: 'Correo',
+           yourEmail: 'correo@email.com',
+           message: 'Mensaje',
+           yourMessage: 'Tú Mensaje',
+           button: 'Enviar Mensaje'
           },
           hero:{
             title: 'Consultoría en Solución Alternativa de Controversias',
@@ -73,6 +85,17 @@ class App extends React.Component {
            description: 'Management nad dispute resolution of commercial disputes through mediation and arbitration processes',
            viewMore: 'view more',
          },
+         contact: {
+          title: 'Contact us',
+          details: 'I assure you that we will find the best solution',
+          name: 'Name',
+          yourName: 'Your name',
+          email: 'Email',
+          yourEmail: 'correo@email.com',
+          message: 'Message',
+          yourMessage: 'Your Message',
+          button: 'Send Message'
+         },
          homeMain:{
           carrerButton: 'View Carrer Path',
           services: 'Services',
@@ -113,82 +136,85 @@ languageSignal = (a) =>{
 }
 
 sendData = () => {
- 
  if(this.state.language.actual==='En'){
+  console.log(this.state.language.en)
+  // debugger
   return this.state.language.en
  }else if(this.state.language.actual==='Es'){
+  
   return this.state.language.es
  }
 }
 
 
 differNav = (valor,whoIs) =>{
- if(whoIs!==null){
-  let es
-  let en
-  let img
-  switch(whoIs){
-   case 'trayectoria':
-    es='Trayectoria'
-    en='Carrer Path'
-    img=carrerImg
-   break;
-   case 'about':
-    es=''
-    en=''
-    img=aboutImg
+  if(whoIs!==null){
+
+   let es
+   let en
+   let img
+   switch(whoIs){
+    case 'trayectoria':
+     es='Trayectoria'
+     en='Carrer Path'
+     img=carrerImg
+    break;
+    case 'about':
+     es=''
+     en=''
+     img=aboutImg
+   }
+   
+   this.setState({
+    
+    language: {
+     ...this.state.language,
+     es:{
+      ...this.state.language.es,
+      nav: {
+       ...this.state.language.es.nav,
+       greenDecorateMessage: es,
+       greenDecorateImg: img
+      }
+     },
+     en: {
+      ...this.state.language.en,
+      nav: {
+       ...this.state.language.en.nav,
+       greenDecorateMessage: en,
+       greenDecorateImg: img
+      }
+     }
+    },
+    nav: valor,
+  
+   }, console.log(this.state))
+  }else{
+   this.setState({
+    // ...this.state,
+    language: {
+     ...this.state.language,
+     es:{
+      ...this.state.language.es,
+      nav: {
+       ...this.state.language.es.nav,
+       greenDecorateMessage: ''
+      }
+     },
+     en: {
+      ...this.state.language.en,
+      nav: {
+       ...this.state.language.en.nav,
+       greenDecorateMessage: ''
+      }
+     }
+    },
+    nav: valor,
+  
+   }, console.log(this.state))
+ 
   }
 
-  this.setState({
-   ...this.state,
-   language: {
-    ...this.state.language,
-    es:{
-     ...this.state.language.es,
-     nav: {
-      ...this.state.language.es.nav,
-      greenDecorateMessage: es,
-      greenDecorateImg: img
-     }
-    },
-    en: {
-     ...this.state.language.es,
-     nav: {
-      ...this.state.language.es.nav,
-      greenDecorateMessage: en,
-      greenDecorateImg: img
-     }
-    }
-   },
-   nav: valor,
- 
-  })
- }else{
-  this.setState({
-
-   ...this.state,
-   language: {
-    ...this.state.language,
-    es:{
-     ...this.state.language.es,
-     nav: {
-      ...this.state.language.es.nav,
-      greenDecorateMessage: ''
-     }
-    },
-    en: {
-     ...this.state.language.es,
-     nav: {
-      ...this.state.language.es.nav,
-      greenDecorateMessage: ''
-     }
-    }
-   },
-   nav: valor,
- 
-  })
-
- }
 }
 
 
@@ -204,15 +230,24 @@ render(){
         >
           <Route exact path="/consultoria-carolina/" render={
             ()=> {
-              return (
-                <Home
-                state={
-                 this.sendData()
-                }
+             return (
+              <Home 
+                state={this.sendData()}
                 differNav={this.differNav}
                 />
               )
             }
+          } 
+          />
+          <Route exact path="/contact/" render={
+           () => {
+            return (
+             <Contact 
+             data={this.sendData()}
+             differNav={this.differNav}
+             />
+            )
+           }
           } 
           />
          <Route exact path="/trayectoria/"  render={

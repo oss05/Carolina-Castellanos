@@ -131,7 +131,7 @@ class FloatMenu extends React.Component {
                   </Link>
                 </li>
                 <li className="FloatMenu__block-menu-item">
-                  <Link onClick={()=> { this.handleMenu() } } to="/" >{this.state.menu.nav.menu4}
+                  <Link onClick={()=> { this.handleMenu() } } to="/contact#inicio" >{this.state.menu.nav.menu4}
                   <img className="FloatMenu__block-menu-triangle" src={triangle} alt="triangle"/>
                   </Link>
                 </li>
