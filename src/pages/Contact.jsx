@@ -21,18 +21,18 @@ class Contact extends React.Component{
     <div className="Contact__form">
      <h1> {this.props.data.contact.title} </h1>
      <p> {this.props.data.contact.details} </p>
-     <form className="Contact__form-container" action="">
+     <form action="mailto:bryanblack1999@gmail.com" className="Contact__form-container" method="post" name="contact">
       <div className="Contact__form-name">
        <span> {this.props.data.contact.name} </span>
-       <input type="text" placeholder={this.props.data.contact.yourName} />
+       <input name="nombre" type="text" placeholder={this.props.data.contact.yourName} />
       </div>
       <div className="Contact__form-email">
        <span> {this.props.data.contact.email} </span>
-       <input type="text" placeholder={this.props.data.contact.yourEmail} />
+       <input name="email" type="text" placeholder={this.props.data.contact.yourEmail} />
       </div>
       <div className="Contact__form-message">
        <span> {this.props.data.contact.message} </span>
-       <textarea>
+       <textarea name="mensaje">
         {this.props.data.contact.yourMessage}
        </textarea>
       </div>
@@ -40,7 +40,9 @@ class Contact extends React.Component{
 
     </div>
     <div className="Contact__button">
+     <button type="submit">
      <Button message={this.props.data.contact.button} />
+     </button>
     </div>
    </section>
   )

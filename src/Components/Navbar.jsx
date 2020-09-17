@@ -1,10 +1,13 @@
 import React from 'react';
-
+import ReactDom from 'react-dom';
 import GreenDecorate from './GreenDecorate';
 import FloatMenu from './FloatMenu';
 
+
 import './styles/Navbar.scss';
 import logo from '../images/Logo.png';
+import whatsFloat from '../images/whatsFloat.png';
+
 
 
 class Navbar extends React.Component{
@@ -26,6 +29,17 @@ class Navbar extends React.Component{
  render(){
   return (
    <React.Fragment>
+    {ReactDom.createPortal(
+     <>
+     <div className="Whats">
+      <a target="_blank" href="https://api.whatsapp.com/send?phone=525583100774">
+      <img src={whatsFloat} alt=""/>
+      </a>
+     </div>
+     </>
+     ,
+     document.getElementById('whats')
+     )}
     {this.state.valor?
      <div className="Navbar2" id="inicio">
      <div className="Navbar__img">
