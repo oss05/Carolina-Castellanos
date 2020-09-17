@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link'
 
 import LogoLittle from '../images/LogoLittle.png';
 import menuIcon from '../images/menuIcon.png';
@@ -116,22 +116,22 @@ class FloatMenu extends React.Component {
             <div className="FloatMenu__block-nav">
               <ul className="FloatMenu__block-menu">
                 <li className="FloatMenu__block-menu-item">
-                  <Link to="/consultoria-carolina" >{this.state.menu.nav.menu1}
+                  <Link onClick={()=> { this.handleMenu() } } to="/consultoria-carolina#inicio" >{this.state.menu.nav.menu1}
                   <img className="FloatMenu__block-menu-triangle" src={triangle} alt="triangle"/>
                   </Link>
                 </li>
                 <li className="FloatMenu__block-menu-item">
-                  <Link to="/trayectoria/" >{this.state.menu.nav.menu2}
+                  <Link onClick={()=> { this.handleMenu() } } to="/trayectoria#inicio" >{this.state.menu.nav.menu2}
                   <img className="FloatMenu__block-menu-triangle" src={triangle} alt="triangle"/>
                   </Link>
                 </li>
                 <li className="FloatMenu__block-menu-item">
-                  <Link to="/acerca-de/" >{this.state.menu.nav.menu3}
+                  <Link onClick={()=> { this.handleMenu() } } to="/acerca-de#inicio" >{this.state.menu.nav.menu3}
                   <img className="FloatMenu__block-menu-triangle" src={triangle} alt="triangle"/>
                   </Link>
                 </li>
                 <li className="FloatMenu__block-menu-item">
-                  <Link to="/" >{this.state.menu.nav.menu4}
+                  <Link onClick={()=> { this.handleMenu() } } to="/" >{this.state.menu.nav.menu4}
                   <img className="FloatMenu__block-menu-triangle" src={triangle} alt="triangle"/>
                   </Link>
                 </li>

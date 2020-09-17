@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link'
 
 import facebookFooter from '../images/facebookFooter.png';
 import youtubeFooter from '../images/youtubeFooter.png';
@@ -13,10 +13,10 @@ const Footer = (props) => {
         <div className="Footer">
             <div className="Footer__menu">
                 <ul>
-                    <li> <Link to="/consultoria-carolina/" > {props.language.footer.opc1} </Link> </li>
-                    <li> <Link to="/trayectoria/" > {props.language.footer.opc2} </Link> </li>
-                    <li> <Link to="/acerca-de/" > {props.language.footer.opc3} </Link> </li>
-                    <li> <Link to="/" > {props.language.footer.opc4} </Link> </li>
+                    <li> <Link to="/consultoria-carolina#inicio"> {props.language.footer.opc1} </Link> </li>
+                    <li> <Link to="/trayectoria#inicio" > {props.language.footer.opc2} </Link> </li>
+                    <li> <Link to="/acerca-de#inicio" > {props.language.footer.opc3} </Link> </li>
+                    <li> <Link to="/consultoria-carolina#inicio" > {props.language.footer.opc4} </Link> </li>
                 </ul>
             </div>
             <div className="Footer__others">

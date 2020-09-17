@@ -27,7 +27,7 @@ class Navbar extends React.Component{
   return (
    <React.Fragment>
     {this.state.valor?
-     <div className="Navbar2">
+     <div className="Navbar2" id="inicio">
      <div className="Navbar__img">
       <GreenDecorate params={this.props.language}/>
      </div>   
@@ -39,7 +39,7 @@ class Navbar extends React.Component{
      </div>
      </div>
       :
-      <div className="Navbar1">
+      <div className="Navbar1" id="inicio">
        <div className="Navbar__logo">
         <img src={logo} alt="logo"/>
        </div> 
