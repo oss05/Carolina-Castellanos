@@ -29,7 +29,7 @@ class Navbar extends React.Component{
     {this.state.valor?
      <div className="Navbar2">
      <div className="Navbar__img">
-      <GreenDecorate message="trayectoria"/>
+      <GreenDecorate params={this.props.language}/>
      </div>   
      <div className="Navbar__menu2">
       <FloatMenu

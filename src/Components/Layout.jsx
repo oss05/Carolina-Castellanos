@@ -9,6 +9,7 @@ const Layout = (props) => {
         <Navbar state={props.state}
         languageSignal={props.languageSignal}
         valor={props.valor}
+        language={props.language}
         />
         {props.children}
         <Footer language={props.language}/>

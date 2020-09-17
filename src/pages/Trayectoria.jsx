@@ -12,8 +12,9 @@ import './styles/Trayectoria.scss';
 
 class Trayectoria extends React.Component{
  
- constructor(props){
+  constructor(props){
   super(props)
+
   this.state={
    details: props.data.trayectoria.details,
    activar: true,
@@ -21,18 +22,19 @@ class Trayectoria extends React.Component{
  }
 
  componentDidMount(){
+  
   const details = document.getElementById('details-carrer')
   details.innerHTML=this.props.data.details
   
   if(visualViewport.width>750){
    console.log('entreee')
-   this.props.differNav(this.state.activar)
+   this.props.differNav(this.state.activar,'trayectoria')
   }else{
-   this.props.differNav(false)
+   this.props.differNav(false,'trayectoria')
    this.setState({
     ...this.state.details,
     activar: false,
-  })}
+   })}
    
  }
 
@@ -46,7 +48,7 @@ class Trayectoria extends React.Component{
 
  
  render(){
- 
+  
   return(
    
    <>
@@ -56,14 +58,14 @@ class Trayectoria extends React.Component{
     onChange={(e) => {
      if(this.state.activar===true  && e){
       console.log('me des-active',e)
-      this.props.differNav(false)
+      this.props.differNav(false,'trayectoria')
       this.setState({
        ...this.state.details,
        activar: false,
       })
      }else if(this.state.activar===false && !e){
       console.log('me active')
-      this.props.differNav(true)
+      this.props.differNav(true,'trayectoria')
       this.setState({
        ...this.state.details,
        activar: true,
@@ -75,7 +77,7 @@ class Trayectoria extends React.Component{
            
            return (
             <>
-            <GreenDecorate message="trayectoria" />
+            <GreenDecorate params={this.props.data} />
             <div className="Trayectoria-container">
             <div className="Trayectoria__profile" >
              <div className="Trayectoria__profile-social" >

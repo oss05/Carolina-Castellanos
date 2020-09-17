@@ -5,6 +5,9 @@ import Layout from './Components/Layout';
 import Home from './pages/Home';
 import Trayectoria from './pages/Trayectoria';
 import About from './pages/About';
+import carrerImg from './images/carrerImg.png';
+import aboutImg from './images/aboutImg.png';
+
 
 class App extends React.Component {
 
@@ -22,6 +25,8 @@ class App extends React.Component {
             menu3: 'Servicios',
             menu4: 'Contacto',
             languageReference: 'Idioma',
+            greenDecorateMessage: 'a',
+            greenDecorateImg: null,
           },
           hero:{
             title: 'Consultoría en Solución Alternativa de Controversias',
@@ -60,6 +65,8 @@ class App extends React.Component {
             menu3: 'Services',
             menu4: 'Contact',
             languageReference: 'Language',
+            greenDecorateMessage: '',
+            greenDecorateImg: null,
           },
           hero:{
            title: 'Consultancy in Aternative Dispute Resolution',
@@ -99,6 +106,7 @@ languageSignal = (a) =>{
   language: {
    ...this.state.language,
    actual: a,
+
   }
  })
  
@@ -113,15 +121,76 @@ sendData = () => {
  }
 }
 
-differNav = (valor) =>{
- this.setState({
-  language: {
-   ...this.state.language,
-  },
-  nav: valor,
 
- })
+differNav = (valor,whoIs) =>{
+ if(whoIs!==null){
+  let es
+  let en
+  let img
+  switch(whoIs){
+   case 'trayectoria':
+    es='Trayectoria'
+    en='Carrer Path'
+    img=carrerImg
+   break;
+   case 'about':
+    es=''
+    en=''
+    img=aboutImg
+  }
+
+  this.setState({
+   ...this.state,
+   language: {
+    ...this.state.language,
+    es:{
+     ...this.state.language.es,
+     nav: {
+      ...this.state.language.es.nav,
+      greenDecorateMessage: es,
+      greenDecorateImg: img
+     }
+    },
+    en: {
+     ...this.state.language.es,
+     nav: {
+      ...this.state.language.es.nav,
+      greenDecorateMessage: en,
+      greenDecorateImg: img
+     }
+    }
+   },
+   nav: valor,
+ 
+  })
+ }else{
+  this.setState({
+
+   ...this.state,
+   language: {
+    ...this.state.language,
+    es:{
+     ...this.state.language.es,
+     nav: {
+      ...this.state.language.es.nav,
+      greenDecorateMessage: ''
+     }
+    },
+    en: {
+     ...this.state.language.es,
+     nav: {
+      ...this.state.language.es.nav,
+      greenDecorateMessage: ''
+     }
+    }
+   },
+   nav: valor,
+ 
+  })
+
+ }
 }
+
 
 render(){
   return (
@@ -146,12 +215,15 @@ render(){
             }
           } 
           />
-         <Route exact path="/trayectoria/" render={
+         <Route exact path="/trayectoria/"  render={
           () => {
            return (
+
              <Trayectoria 
+
              data={this.sendData()}
              differNav={this.differNav}
+             
              />
            )
           }

@@ -18,9 +18,9 @@ class About extends React.Component{
   const details = document.getElementById('deatils-about')
   details.innerHTML=this.state.description
   if(visualViewport.width>750){
-   this.props.differNav(this.state.activar)
+   this.props.differNav(this.state.activar,'about')
   }else{
-   this.props.differNav(false)
+   this.props.differNav(false,'about')
    this.setState({
     ...this.state.details,
     activar: false,
@@ -44,14 +44,14 @@ class About extends React.Component{
     onChange={(e) => {
      if(this.state.activar===true  && e){
       console.log('me des-active',e)
-      this.props.differNav(false)
+      this.props.differNav(false,'about')
       this.setState({
        ...this.state.details,
        activar: false,
       })
      }else if(this.state.activar===false && !e){
       console.log('me active')
-      this.props.differNav(true)
+      this.props.differNav(true,'about')
       this.setState({
        ...this.state.details,
        activar: true,
@@ -59,7 +59,7 @@ class About extends React.Component{
      }
     }}
     render={() => (
-     <GreenDecorate />
+     <GreenDecorate params={this.props.data}/>
     )}
     />
 

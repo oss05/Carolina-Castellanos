@@ -1,12 +1,10 @@
 import React from 'react';
 import './styles/GreenDecorate.scss';
-import carrerImg from '../images/carrerImg.png';
+
 
 class GreenDecorate extends React.Component{
 
- constructor(props){
-  super(props)
- }
+
 
  render(){
 
@@ -14,8 +12,8 @@ class GreenDecorate extends React.Component{
   return (
    <>
    <div className="GreenDecorate">
-    <img src={carrerImg} alt=""/>
-    <span> {this.props.message} </span>
+    <img src={this.props.params.nav.greenDecorateImg} alt=""/>
+    <span> {this.props.params.nav.greenDecorateMessage} </span>
   </div>
   </>
   )

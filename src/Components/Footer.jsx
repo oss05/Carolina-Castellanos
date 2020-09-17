@@ -13,9 +13,9 @@ const Footer = (props) => {
         <div className="Footer">
             <div className="Footer__menu">
                 <ul>
-                    <li> <Link to="/" > {props.language.footer.opc1} </Link> </li>
-                    <li> <Link to="/" > {props.language.footer.opc2} </Link> </li>
-                    <li> <Link to="/" > {props.language.footer.opc3} </Link> </li>
+                    <li> <Link to="/consultoria-carolina/" > {props.language.footer.opc1} </Link> </li>
+                    <li> <Link to="/trayectoria/" > {props.language.footer.opc2} </Link> </li>
+                    <li> <Link to="/acerca-de/" > {props.language.footer.opc3} </Link> </li>
                     <li> <Link to="/" > {props.language.footer.opc4} </Link> </li>
                 </ul>
             </div>
