@@ -32,7 +32,9 @@ class Contact extends React.Component{
       </div>
       <div className="Contact__form-message">
        <span> {this.props.data.contact.message} </span>
-       <input type="text" placeholder={this.props.data.contact.yourMessage} />
+       <textarea>
+        {this.props.data.contact.yourMessage}
+       </textarea>
       </div>
      </form>
 
