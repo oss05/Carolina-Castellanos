@@ -153,16 +153,29 @@ differNav = (valor,whoIs) =>{
    let es
    let en
    let img
+   let titleEs
+   let detailsEs
+   let titleEn
+   let detailsEn
+   
    switch(whoIs){
     case 'trayectoria':
      es='Trayectoria'
      en='Carrer Path'
      img=carrerImg
+     titleEs= null
+     detailsEs= null
+     titleEn= null
+     detailsEn= null
     break;
     case 'about':
      es=''
      en=''
      img=aboutImg
+     titleEs= 'Consultoría en Solución Alternativa de Controversias'
+     detailsEs= 'Gestión y solución alternativa de controversias comerciales por medio de procesos de mediación y arbitraje.'
+     titleEn= 'Consultancy in Alternative Dispute Resolution'
+     detailsEn= 'Management and dispute resolution of commercial disputes through mediation and arbitration processes.'
    }
    
    this.setState({
@@ -174,7 +187,9 @@ differNav = (valor,whoIs) =>{
       nav: {
        ...this.state.language.es.nav,
        greenDecorateMessage: es,
-       greenDecorateImg: img
+       greenDecorateImg: img,
+       title: titleEs,
+       details: detailsEs,
       }
      },
      en: {
@@ -182,7 +197,9 @@ differNav = (valor,whoIs) =>{
       nav: {
        ...this.state.language.en.nav,
        greenDecorateMessage: en,
-       greenDecorateImg: img
+       greenDecorateImg: img,
+       title: titleEn,
+       details: detailsEn,
       }
      }
     },

@@ -7,6 +7,8 @@
  width: 100%;
  position: relative;
  display: flex;
+ // box-shadow: 0px 7px 15px 0px rgba(133,129,133,1);
+margin-bottom: 7px;
  & span{
 
   position: absolute;
@@ -20,19 +22,72 @@
 
  & img{
   width: 100%;
+
  }
 
+ & .About__decorate{
+  // border: 1px solid red;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  z-index: 1;
+  bottom:5px;
+  left: 4%;
+  padding-left: 5%;
+
+  padding-top: 2%;
+  background-color: white;
+  border-top-right-radius: 50px;
+  box-shadow: 5px 7px 15px 0px rgba(133,129,133,1);
+
+  & div{
+   background-color: #255429;
+   width: 50px;
+   height: 50px;
+   position: absolute;
+   top: 0;
+   left: 0;
+  }
+
+  & h1{
+   font-family: $font-monserrat;
+  }
+
+  & p{
+   font-family: $font-monserrat;
+   color: #707070;
+  }
+ }
+ 
+
+}
+
+@media screen and(max-width: 1300px){
+ .GreenDecorate .About__decorate h1{
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+ }
+ .GreenDecorate .About__decorate p{
+  font-size: 1rem;
+  margin: 0;
+ }
+
+ .GreenDecorate .About__decorate div{
+  width: 20px;
+  height: 20px;
+ }
+
+ .GreenDecorate .About__decorate{
+  width: 70%;
+  padding-right: 5%;
+ }
 }
 
 @media screen and(max-width: 750px){
- .GreenDecorate{
-  & span{
-   left: 5%;
-   font-size: 2rem;
 
-  }
-
- 
+ .GreenDecorate .About__decorate{
+  display: none;
  }
-}
 
+}

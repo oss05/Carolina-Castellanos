@@ -1,4 +1,5 @@
 import React from 'react';
+// import ReactDom from 'react-dom';
 import Media from 'react-media';
 import GreenDecorate from '../Components/GreenDecorate';
 import writeAbout from '../images/writeAbout.png';
