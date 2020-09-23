@@ -128,6 +128,7 @@
   @include flexbox(center,flex-start,column);
   & .Home__main-right-profile-data{
     // border: 1px solid black;
+    font-family: $font-raleway;
     padding-left: 15px;
     padding-top: 10px;
     padding-bottom: 10px;

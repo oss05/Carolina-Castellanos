@@ -54,12 +54,12 @@
   padding: 0 10%;
 
   & div{
-   border-left: 5px solid #587454;
+   border-left: 10px solid #587454;
    padding-left: 20px;
 
    & h2{
-    font-family: $font-monserrat;
-    font-weight: 800;
+    font-family: $font-raleway;
+    font-weight: bold;
     font-size: 2rem;
 
    }
@@ -80,8 +80,8 @@
   grid-column: 1/3;
   grid-row: 2/3;
   & h2{
-   font-family: $font-monserrat;
-   font-weight: 800;
+   font-family: $font-raleway;
+   font-weight: bold;
    font-size: 2rem;
   }
 

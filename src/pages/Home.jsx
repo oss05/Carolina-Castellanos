@@ -15,7 +15,7 @@ import carolina from '../images/carolina.png';
 import facebookGrey from '../images/facebookGrey.png';
 import twitterGrey from '../images/twitterGrey.png';
 import linkedlnGrey from '../images/linkedlnGrey.png';
-import moreGrey from '../images/moreGrey.png';
+// import moreGrey from '../images/moreGrey.png';
 
 import './styles/Home.scss';
 
@@ -66,9 +66,6 @@ render(){
          </a>
          <a href="/">
           <img src={linkedlnGrey} alt=""/>
-         </a>
-         <a href="/">
-          <img src={moreGrey} alt=""/>
          </a>
         </div>
         <div className="Home__main-right-profile-bottom"></div>

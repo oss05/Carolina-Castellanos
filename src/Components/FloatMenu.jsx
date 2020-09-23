@@ -146,7 +146,7 @@ class FloatMenu extends React.Component {
                 <div
                 onClick={() => { this.handleLaguage()} }
                 > 
-                {this.state.menu.language} 
+                {this.state.menu.language==='Es'?'En':'Sp'} 
                 </div>
               </div>
             </div>

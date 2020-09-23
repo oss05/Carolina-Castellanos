@@ -6,9 +6,9 @@ import Button from './Button';
 import './styles/Hero.scss';
 import triangleHero from '../images/triangleHero.png';
 import handHello from '../images/handHello.png';
-import eficienciaIcon from '../images/eficienciaIcon.png';
-import arbitraje from '../images/arbitraje.png';
-import calidadIcon from '../images/calidadIcon.png';
+import eficienciaIcon from '../images/eficienciaIcon.PNG';
+import arbitraje from '../images/arbitraje.PNG';
+import calidadIcon from '../images/calidadIcon.PNG';
 import handHelloLittle from '../images/handHelloLittle.png';
 
 class Hero extends React.Component{

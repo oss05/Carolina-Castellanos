@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link'
 import ReactDom from 'react-dom';
 import GreenDecorate from './GreenDecorate';
 import FloatMenu from './FloatMenu';
@@ -55,7 +56,9 @@ class Navbar extends React.Component{
       :
       <div className="Navbar1" id="inicio">
        <div className="Navbar__logo">
-        <img src={logo} alt="logo"/>
+        <Link to='/consultoria-carolina#inicio'>
+         <img src={logo} alt="logo"/>
+        </Link>
        </div> 
        <div className="Navbar__menu">
         <FloatMenu
