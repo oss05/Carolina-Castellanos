@@ -17,23 +17,32 @@
   & .Hero-decorate{
     // border: 1px solid red;
     width: 95%;
-    height: 20%;
+    height: 25%;
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: 1;
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 60% 40%;
     opacity: 0.8;
     overflow: hidden;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
     & .Hero-decorate-left{
       background-color: #255429;
+      @include flexbox();
+      & p{
+       color: white;
+       width: 90%;
+       font-size: 1.2rem;
+       font-family: $font-raleway;
+      }
     }
 
     & .Hero-decorate-right{
       background-color: #C4C4C4;
+      @include flexbox();
+    
     }
   }
 }
@@ -41,7 +50,7 @@
 .Hero__left{
   // border: 1px solid red;
   position: relative;
-  
+  margin-bottom: 100px;
   grid-column: 1/2;
   grid-row: 1/2;
   padding: 50px 50px 130px 10%;
@@ -71,11 +80,20 @@
 }
 
 .Hero__right{
+ // border: 1px solid blue;
   grid-column: 2/3;
   grid-row: 1/2;
   @include flexbox(space-between,flex-start,column);
   padding-left: 50px;
-  padding-bottom: 70%;
+  padding-bottom: 100%;
+  & img{
+   // border: 1px solid blue;
+  }
+  & div .Hero__rigth-title{
+   margin-top: 5px;
+   font-family: $font-raleway;
+   font-weight: 700;
+  }
 }
 
 @media screen and(max-width: 1270px){
