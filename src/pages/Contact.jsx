@@ -21,7 +21,7 @@ class Contact extends React.Component{
     <div className="Contact__form">
      <h1> {this.props.data.contact.title} </h1>
      <p> {this.props.data.contact.details} </p>
-     <form action="mailto:bryanblack1999@gmail.com" className="Contact__form-container" method="post" name="contact">
+     <form action="//formspree.io/random@gmail.com" method="POST" className="Contact__form-container">
       <div className="Contact__form-name">
        <span> {this.props.data.contact.name} </span>
        <input name="nombre" type="text" placeholder={this.props.data.contact.yourName} />
@@ -36,13 +36,9 @@ class Contact extends React.Component{
         {this.props.data.contact.yourMessage}
        </textarea>
       </div>
+      <input className="Contact__button" type="submit" value={this.props.data.contact.button}></input>
      </form>
 
-    </div>
-    <div className="Contact__button">
-     <button type="submit">
-     <Button message={this.props.data.contact.button} />
-     </button>
     </div>
    </section>
   )
