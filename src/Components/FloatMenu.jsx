@@ -16,13 +16,13 @@ class FloatMenu extends React.Component {
     this.state={
       menu: {
         isActive: false,
-        language: props.state.en.language,
+        language: props.state.es.language,
         nav: {
-          menu1: props.state.en.nav.menu1,
-          menu2: props.state.en.nav.menu2,
-          menu3: props.state.en.nav.menu3,
-          menu4: props.state.en.nav.menu4,
-          languageReference: props.state.en.nav.languageReference,
+          menu1: props.state.es.nav.menu1,
+          menu2: props.state.es.nav.menu2,
+          menu3: props.state.es.nav.menu3,
+          menu4: props.state.es.nav.menu4,
+          languageReference: props.state.es.nav.languageReference,
         }
       }
     }

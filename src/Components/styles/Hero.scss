@@ -8,12 +8,48 @@
   grid-template-columns: 85% 15%;
   grid-template-rows: auto;
   position: relative;
+  // overflow: hidden;
   // padding-bottom: 50px;
   & .Hero-triangle{
     position: absolute;
     top: -70px;
     width: 30%;
   }
+
+  & .Hero-decorate-little{
+   // border: 1px solid red;
+   width: 95%;
+   height: 25%;
+   position: absolute;
+   bottom: -25%;
+   right: 0;
+   z-index: 1;
+   display: grid;
+   grid-template-columns: 60% 40%;
+   opacity: 1;
+   overflow: hidden;
+   border-bottom-left-radius: 20px;
+   border-top-left-radius: 20px;
+   & .Hero-decorate-little-left{
+     background-color: #255429;
+     @include flexbox();
+     & p{
+      color: white;
+      width: 90%;
+      font-size: 1rem;
+      font-family: $font-raleway;
+     }
+   }
+
+   & .Hero-decorate-little-right{
+     background-color: white;
+     @include flexbox();
+    & img{
+     height: 90%;
+    }
+   }
+ }
+
   & .Hero-decorate{
     // border: 1px solid red;
     width: 95%;
@@ -42,7 +78,9 @@
     & .Hero-decorate-right{
       background-color: #C4C4C4;
       @include flexbox();
-    
+      & img{
+       height: 90%;
+      }
     }
   }
 }
@@ -50,11 +88,14 @@
 .Hero__left{
   // border: 1px solid red;
   position: relative;
-  margin-bottom: 100px;
+  // margin-bottom: 100px;
   grid-column: 1/2;
   grid-row: 1/2;
-  padding: 50px 50px 130px 10%;
+  padding: 50px 50px 170px 10%;
   font-family: $font-roboto;
+  & a{
+   text-decoration: none;
+  }
   
   & .Hero-hand{
     position: absolute;
@@ -86,9 +127,7 @@
   @include flexbox(space-between,flex-start,column);
   padding-left: 50px;
   padding-bottom: 100%;
-  & img{
-   // border: 1px solid blue;
-  }
+  
   & div .Hero__rigth-title{
    margin-top: 5px;
    font-family: $font-raleway;
@@ -129,7 +168,7 @@
  
  .Hero__left{
   padding-top: 30px;
-  padding-bottom: 100px;
+  // padding-bottom: 100px;
  }
 
  .Hero .Hero-triangle{
@@ -204,4 +243,9 @@
  .Hero__left .Hero__left-description{
   margin-bottom: 20px;
  }
+
+ .Hero .Hero-decorate-little .Hero-decorate-little-left p{
+  font-size: 0.8rem;
+ }
+
 }

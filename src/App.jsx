@@ -17,7 +17,7 @@ class App extends React.Component {
     this.state={
       nav: false,
       language: {
-       actual:'En',
+       actual:'Es',
         es: {
           language: 'Es',
           nav: {

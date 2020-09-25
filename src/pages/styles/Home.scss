@@ -126,6 +126,10 @@
   padding-left: 20px;
   grid-column: 2/3;
   @include flexbox(center,flex-start,column);
+
+  & a{
+   text-decoration: none;
+  }
   & .Home__main-right-profile-data{
     // border: 1px solid black;
     font-family: $font-raleway;
@@ -172,7 +176,7 @@
  }
 }
 
-@media screen and(max-width: 830px){
+@media screen and(max-width: 850px){
  .Home__teacher-in-title{
   font-size: 1rem;
  }

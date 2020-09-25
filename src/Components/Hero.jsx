@@ -14,9 +14,10 @@ import handHelloLittle from '../images/handHelloLittle.png';
 import calidadGreen from '../images/calidadGreen.png';
 import confianzaGreen from '../images/confianzaGreen.png';
 import eficienciaGreen from '../images/eficienciaGreen.png';
-import calidadMochado from '../images/calidadMochado.png';
-import confianzaMochado from '../images/confianzaMochado.png';
-import eficienciaMochado from '../images/eficienciaMochado.png';
+import calidadMochado from '../images/calidadSinMochar.png';
+import confianzaMochado from '../images/confianzaSinMochar.png';
+import eficienciaMochado from '../images/eficienciaSinMochar.png';
+
 
 
 class Hero extends React.Component{
@@ -137,6 +138,21 @@ class Hero extends React.Component{
     return(
       <>
         <div className="Hero">
+          <Media
+          query="(max-width: 850px)"
+          render={ () => (
+           <div className="Hero-decorate-little">
+           <div className="Hero-decorate-little-left">
+            <p> {this.state.img.textDetails} </p>
+           </div>
+           <div className="Hero-decorate-little-right">
+            { this.state.img.imgDetails? <img src={this.state.img.imgDetails} alt=""/> :
+             null
+            }
+           </div>
+           </div>
+          ) }
+          />
           <Media query="(max-width: 850px)" render={() =>
             (
               <img className="Hero__img-responsive" src={handHelloLittle} alt="saludo de manos"></img>
