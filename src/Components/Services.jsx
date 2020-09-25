@@ -12,6 +12,7 @@ import rectangleGreen from '../images/rectangleGreen.png';
 import mediacionFondo from '../images/mediacionFondo.png';
 import arbitrajeFondo from '../images/arbitrajeFondo.png';
 import justiciaFondo from '../images/justiciaFondo.png';
+import crossIcon from '../images/crossIcon.png';
 
 class Services extends React.Component {
  
@@ -50,6 +51,16 @@ class Services extends React.Component {
    servicio3points: nextProps.state.homeMain.servicio3points,
    
   })
+ }
+
+ handleImg = () => {
+  if(this.state.select=='1'){
+   return arbitrajeRectangle
+  }else if(this.state.select=='2'){
+   return justiciaRectangle
+  }else{
+   return mediacionRectangle
+  }
  }
 
  handleTitle = () => {
@@ -214,35 +225,73 @@ class Services extends React.Component {
           }
         </div>
       </div>
-      <div className="Services__selected">
-       { this.state.activador ?
-        <div className="Services__selected-true">
-         <div className="Services__selected-img">
-          <img src={this.state.fondo} alt=""/>
-          <div></div>
-         </div>
-         <div className="Services__selected-details">
-          <div className="Services__selected-title">
+      <Media query="(min-width: 832px)" 
+      render={
+       () => (
+        <div className="Services__selected">
+        { this.state.activador ?
+         <div className="Services__selected-true">
+          <div className="Services__selected-img">
+           <img src={this.state.fondo} alt=""/>
            <div></div>
-           <h1> {this.handleTitle() } </h1>
           </div>
-          <div className="Services__selected-text">
-           <ul>
-            {
-             
-              this.handlePoint().map( (puntos) => {
-               return <li> {puntos} </li>
-              } )
-             
-            }
-           </ul>
+          <div className="Services__selected-details">
+           <div className="Services__selected-title">
+            <div></div>
+            <h1> {this.handleTitle() } </h1>
+           </div>
+           <div className="Services__selected-text">
+            <ul>
+             {
+              
+               this.handlePoint().map( (puntos) => {
+                return <li> {puntos} </li>
+               } )
+              
+             }
+            </ul>
+           </div>
           </div>
+         </div>
+         :
+         null
+        }
+       </div>
+       )
+      }
+      />
+      <Media query="(max-width: 829px)" 
+      render={
+       () => (
+        this.state.activador?
+        <div className="Services__selected-little">
+         <img 
+         onClick={ () => {
+          this.setState({
+           ...this.state,
+           activador: false,
+          })
+         } }
+         className="Services-cross" src={crossIcon} alt=""/>
+         <img src={this.handleImg()} alt=""/>
+         <h1> {this.handleTitle() } </h1>
+         <div>
+         <ul>
+             {
+              
+               this.handlePoint().map( (puntos) => {
+                return <li> {puntos} </li>
+               } )
+              
+             }
+            </ul>
          </div>
         </div>
         :
         null
-       }
-      </div>
+       )
+      }
+      />
     </section>
     
   </>

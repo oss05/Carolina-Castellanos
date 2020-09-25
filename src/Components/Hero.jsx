@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link'
 import Media from 'react-media';
 
 import Button from './Button';
@@ -160,7 +161,9 @@ class Hero extends React.Component{
             <p className="Hero__left-description">
               {this.state.description}
             </p>
+            <Link to="/acerca-de/#inicio" >
             <Button message={this.state.viewMore}/>
+            </Link>
           </div>
           <div className="Hero__right">
             <div>

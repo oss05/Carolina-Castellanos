@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { HashLink as Link } from 'react-router-hash-link'
 import Hero from '../Components/Hero';
 import Button from '../Components/Button';
 import Services from '../Components/Services';
@@ -74,7 +74,9 @@ render(){
        </div>
        <div className="Home__main-right-profile-details">
            <h1 className="Home__main-right-profile-data">Carolina Castellanos López<br/><span>Abogada Consultora</span> </h1>
+           <Link to="/trayectoria/#inicio">
            <Button message={this.state.carrerButton} />
+           </Link>
        </div>
       </div>
       <Services
