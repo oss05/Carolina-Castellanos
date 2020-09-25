@@ -48,7 +48,24 @@ class App extends React.Component {
           homeMain:{
            carrerButton: 'Ver Trayectoria',
            services: 'Servicios',
-           experienceTitle: 'Experiencia impartiendo clases y conferencias en'
+           experienceTitle: 'Experiencia impartiendo clases y conferencias en',
+           tituloServicio1: 'Arbitraje',
+           tituloServicio2: 'Derecho Civil y Comercial',
+           tituloServicio3: 'Mediación',
+           servicio1points: [
+            'Árbitro de derecho privado para la resolución de controversias civiles y comerciales, en arbitrajes nacionales o internacionales, administrados o ad-hoc.',
+            'Representación jurídica de personas físicas o morales en procesos arbitrales ad-hoc o administrados, nacionales o internacionales.',
+            'Tramitación de procesos judiciales con relación al arbitraje para: Reconocimiento y ejecución de laudos arbitrales.Nulidad de laudos arbitrales Revisión judicial de laudos arbitrales sobre competencia. Remisión judicial al arbitraje. Nombramiento judicial de árbitros. Medidas cautelares a ser dictadas por un juez, con relación a un arbitraje por iniciarse, en curso o concluido. Ejecución de medidas cautelares dictadas por un tribunal arbitral.'
+           ],
+           servicio2points: [
+            'Asesoría jurídica en materia civil y comercial.',
+            'Elaboración de estrategias jurídicas en materia civil y comercial.',
+            'Revisión de contratos civiles y mercantiles. ',
+           ],
+           servicio3points: [
+            'Carolina Castellanos López presta servicios como mediadora privada para la solución de controversias civiles y comerciales en procesos de mediación.',
+            'Representación jurídica de personas físicas o morales en procesos de mediación.',
+           ],
           },
           footer:{
            opc1: 'Inicio',
@@ -99,7 +116,24 @@ class App extends React.Component {
          homeMain:{
           carrerButton: 'View Carrer Path',
           services: 'Services',
-          experienceTitle: 'Experience teaching classes and conferences in:'
+          experienceTitle: 'Experience teaching classes and conferences in:',
+          tituloServicio1: 'Arbitration',
+           tituloServicio2: 'Civil and Commercial Law',
+           tituloServicio3: 'Mediation',
+           servicio1points: [
+            'Carolina Castellanos López serves as a private law arbitrator for the solution of civil and commercial disputes in national and international arbitration processes, administered or ad-hoc.',
+            'Legal representative of natural and legal persons in national and international arbitration processes, administered or ad-hoc.',
+            'Processing of judicial processes in relation to arbitration for: - Recognition and execution of arbitration awards. - Nullity of arbitration awards. - Judicial review of jurisdiction awards. - Judicial referral to arbitration. - Judicial appointment of arbitrators. - Precautionary measures to be dictated by a judge, in relation to an arbitration to be initiated, ongoing or concluded. - Execution of precautionary measures dictated by an arbitral tribunal. '
+           ],
+           servicio2points: [
+            'Legal advice. ',
+            'Development of legal strategies.',
+            'Review of contracts.',
+           ],
+           servicio3points: [
+            'Carolina Castellanos López serves as a private mediator for the solution of civil and commercial disputes in mediation processes.',
+            'Legal representative of natural and legal persons in mediation processes.',
+           ],
          },
          footer:{
           opc1: 'Home',
