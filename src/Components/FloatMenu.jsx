@@ -11,9 +11,9 @@ import './styles/FloatMenu.scss';
 
 class FloatMenu extends React.Component {
 
-  constructor(props){
+  constructor(props) {
     super(props)
-    this.state={
+    this.state = {
       menu: {
         isActive: false,
         language: props.state.es.language,
@@ -26,13 +26,13 @@ class FloatMenu extends React.Component {
         }
       }
     }
-    
+
   }
 
-  handleLaguage(){
-   
+  handleLaguage() {
+
     const language = this.props.state
-    if(this.state.menu.language==='En'){
+    if (this.state.menu.language === 'En') {
       this.props.languageSignal('Es')
       this.setState({
         menu: {
@@ -47,9 +47,9 @@ class FloatMenu extends React.Component {
           }
         }
       })
-      
-    }else{
-     this.props.languageSignal('En')
+
+    } else {
+      this.props.languageSignal('En')
       this.setState({
         menu: {
           ...this.state.menu,
@@ -65,11 +65,11 @@ class FloatMenu extends React.Component {
       })
     }
   }
-  
-  handleMenu(){
-    let menu=document.getElementById('FloatMenu-active');
+
+  handleMenu() {
+    let menu = document.getElementById('FloatMenu-active');
     let block = document.getElementById('FloatMenu__block-active');
-    if(!this.state.menu.isActive){
+    if (!this.state.menu.isActive) {
       this.setState({
         menu: {
           ...this.state.menu,
@@ -78,7 +78,7 @@ class FloatMenu extends React.Component {
       });
       menu.classList.add('FloatMenu-active')
       block.classList.add('FloatMenu__block-active')
-    }else{
+    } else {
       this.setState({
         menu: {
           ...this.state.menu,
@@ -91,62 +91,62 @@ class FloatMenu extends React.Component {
     }
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <>
         <div className="FloatMenu"
-        id="FloatMenu-active"
+          id="FloatMenu-active"
         >
-          <img src={menuIcon} 
-          alt="icono menu" 
-          className="FloatMenu__img"
-          onClick={ () => { this.handleMenu() } }
+          <img src={menuIcon}
+            alt="icono menu"
+            className="FloatMenu__img"
+            onClick={() => { this.handleMenu() }}
           />
           <div className="FloatMenu__block"
-          id="FloatMenu__block-active"
+            id="FloatMenu__block-active"
           >
             <div className="FloatMenu__block-logo">
-              <img src={LogoLittle} alt=""/>
+              <img src={LogoLittle} alt="" />
             </div>
             <div className="FloatMenu__block-cross">
               <img src={crossIcon} alt="cross icon"
-              onClick={()=> { this.handleMenu() } }
+                onClick={() => { this.handleMenu() }}
               />
             </div>
             <div className="FloatMenu__block-nav">
               <ul className="FloatMenu__block-menu">
                 <li className="FloatMenu__block-menu-item">
-                  <Link onClick={()=> { this.handleMenu() } } to="/consultoria-carolina#inicio" >{this.state.menu.nav.menu1}
-                  <img className="FloatMenu__block-menu-triangle" src={triangle} alt="triangle"/>
+                  <Link onClick={() => { this.handleMenu() }} to="/#inicio" >{this.state.menu.nav.menu1}
+                    <img className="FloatMenu__block-menu-triangle" src={triangle} alt="triangle" />
                   </Link>
                 </li>
                 <li className="FloatMenu__block-menu-item">
-                  <Link onClick={()=> { this.handleMenu() } } to="/trayectoria#inicio" >{this.state.menu.nav.menu2}
-                  <img className="FloatMenu__block-menu-triangle" src={triangle} alt="triangle"/>
+                  <Link onClick={() => { this.handleMenu() }} to="/trayectoria#inicio" >{this.state.menu.nav.menu2}
+                    <img className="FloatMenu__block-menu-triangle" src={triangle} alt="triangle" />
                   </Link>
                 </li>
                 <li className="FloatMenu__block-menu-item">
-                  <Link onClick={()=> { this.handleMenu() } } to="/acerca-de#inicio" >{this.state.menu.nav.menu3}
-                  <img className="FloatMenu__block-menu-triangle" src={triangle} alt="triangle"/>
+                  <Link onClick={() => { this.handleMenu() }} to="/acerca-de#inicio" >{this.state.menu.nav.menu3}
+                    <img className="FloatMenu__block-menu-triangle" src={triangle} alt="triangle" />
                   </Link>
                 </li>
                 <li className="FloatMenu__block-menu-item">
-                  <Link onClick={()=> { this.handleMenu() } } to="/contact#inicio" >{this.state.menu.nav.menu4}
-                  <img className="FloatMenu__block-menu-triangle" src={triangle} alt="triangle"/>
+                  <Link onClick={() => { this.handleMenu() }} to="/contact#inicio" >{this.state.menu.nav.menu4}
+                    <img className="FloatMenu__block-menu-triangle" src={triangle} alt="triangle" />
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="FloatMenu__block-details">
               <div className="FloatMenu__block-details-left">
-                <img src={adressImg} alt=""/>
+                <img src={adressImg} alt="" />
               </div>
               <div className="FloatMenu__block-details-right">
                 <div> {this.state.menu.nav.languageReference} </div>
                 <div
-                onClick={() => { this.handleLaguage()} }
-                > 
-                {this.state.menu.language==='Es'?'En':'Sp'} 
+                  onClick={() => { this.handleLaguage() }}
+                >
+                  {this.state.menu.language === 'Es' ? 'En' : 'Sp'}
                 </div>
               </div>
             </div>

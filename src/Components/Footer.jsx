@@ -13,7 +13,7 @@ const Footer = (props) => {
         <div className="Footer">
             <div className="Footer__menu">
                 <ul>
-                    <li> <Link to="/consultoria-carolina#inicio"> {props.language.footer.opc1} </Link> </li>
+                    <li> <Link to="/#inicio"> {props.language.footer.opc1} </Link> </li>
                     <li> <Link to="/trayectoria#inicio" > {props.language.footer.opc2} </Link> </li>
                     <li> <Link to="/acerca-de#inicio" > {props.language.footer.opc3} </Link> </li>
                     <li> <Link to="/contact#inicio" > {props.language.footer.opc4} </Link> </li>
@@ -22,10 +22,10 @@ const Footer = (props) => {
             <div className="Footer__others">
                 <li> <Link to="/" > {props.language.footer.social} </Link> </li>
                 <div className="Footer__others-social">
-                 <img src={youtubeFooter} alt=""/>
-                 <img src={facebookFooter} alt=""/>
-                 <img src={twitterFooter} alt=""/>
-                 <img src={linkedlnFooter} alt=""/>
+                    <img src={youtubeFooter} alt="" />
+                    <img src={facebookFooter} alt="" />
+                    <img src={twitterFooter} alt="" />
+                    <img src={linkedlnFooter} alt="" />
                 </div>
             </div>
         </div>
