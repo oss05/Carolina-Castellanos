@@ -5,7 +5,7 @@ import LogoLittle from '../images/LogoLittle.png';
 import menuIcon from '../images/menuIcon.png';
 import crossIcon from '../images/crossIcon.png';
 import triangle from '../images/triangle.png';
-import adressImg from '../images/adressImg.png';
+import adressImg from '../images/navGoog.png';
 
 import './styles/FloatMenu.scss';
 

@@ -117,18 +117,26 @@
      }
     }
     .meditacionC {
-      border: 1px solid blue;
       display: flex;
     }
-    // .meditacionImg  {
-     
-    //   img{
-    //     width: 379.3px ;
-    //     height: 268.78px;
-    //   }
-     
-    // }
 
+  }
+  .meditacionC2{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .seccionHome{
+    // border: black 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    div {
+      border: solid 3px #255429;
+      width: 150px;
+    }
   }
 
   & .Services__title{
@@ -281,6 +289,31 @@
   border-top-left-radius: 15px;
   opacity: 0.5;
  }
+
+ .meditacionC {
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+}
+}
+.meditacionC2{
+display: flex;
+flex-direction: column;
+margin-top: 50px;
+margin-bottom: 50px;
+}
+
+.seccionHome{
+border: black 1px solid;
+display: flex;
+flex-direction: column-reverse;
+align-items: center;
+justify-content: space-evenly;
+div {
+  border: solid 3px #255429;
+  width: 150px;
+}
+
 }
 
 @media screen and(max-width: 620px){
