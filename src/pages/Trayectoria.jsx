@@ -95,7 +95,7 @@ class Trayectoria extends React.Component{
              <Button message={this.props.data.trayectoria.sendButton} /> 
             </div>
             <h3 className="Trayectoria__little-title"> {this.props.data.trayectoria.title} </h3>
-            <p className="Trayectoria__little-details" id="details-carrer">  </p>
+            <li className="Trayectoria__little-details" id="details-carrer">  </li>
            </div>
            </>
              )
@@ -117,8 +117,14 @@ class Trayectoria extends React.Component{
       <img src={Linkedln} alt=""/>
      </div>
      <h3 className="Trayectoria__right-title"> {this.props.data.trayectoria.title} </h3>
-     <p className="Trayectoria__right-details" id="details-carrer">  </p>
-    </div>
+     <div className="resumenAll">
+      <div className="Resumen">
+        <h4>Resumen Profecional</h4>
+        <div></div>
+        </div>
+        <li className="Trayectoria__right-details" id="details-carrer">  </li>
+      </div>
+     </div>
     </>
 
    </section>

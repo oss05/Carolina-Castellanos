@@ -52,37 +52,7 @@ class Services extends React.Component {
    
   })
  }
-
- handleImg = () => {
-  if(this.state.select=='1'){
-   return arbitrajeRectangle
-  }else if(this.state.select=='2'){
-   return justiciaRectangle
-  }else{
-   return mediacionRectangle
-  }
- }
-
- handleTitle = () => {
-  if(this.state.select=='1'){
-   return this.state.tituloServicio1
-  }else if(this.state.select=='2'){
-   return this.state.tituloServicio2
-  }else{
-   return this.state.tituloServicio3
-  }
- }
-
- handlePoint = () => {
-  if(this.state.select=='1'){
-   return this.state.servicio1points
-  }else if(this.state.select=='2'){
-   return this.state.servicio2points
-  }else{
-   return this.state.servicio3points
-  }
- }
-
+ 
  handleSelected = (who) => {
   switch(who){
    case '1':
@@ -156,95 +126,58 @@ class Services extends React.Component {
         <div className="Services__icons-decorate" ></div>
        ) }
        />
-        <div className="Services__icons-1">
-          {
-           this.state.img1==mediacionRectangle?
-           <img
-           onClick={() => {this.handleSelected('1')} } 
-           src={this.state.img1} 
-           alt=""
-           />
-           :
-           <div className="Services__icons-rotate">
+      </div>
+      <Media query="(min-width: 832px)" 
+      render={
+       () => (
+        <div className="Services__selected">
+         <div className="meditacionC">
+         <div className="Services__selected-details">
+           <div className="Services__selected-title">
+            <h1> {this.state.tituloServicio3} </h1>
+            <div></div>
+            <div className="Services__icons-rotate">
             <img
             className="Services__icons-rotate-fondo"
-             onClick={() => {this.handleSelected('1')} } 
-             src={this.state.img1} 
-             alt=""
-             />
-            <img 
-            className="Services__icons-rotate-draw"
-            src={rectangleGreen} alt=""/>
-           </div>
-          }
-        </div>
-        <div className="Services__icons-2">
-        {
-           this.state.img2==arbitrajeRectangle?
-           <img
-           onClick={() => {this.handleSelected('2')} } 
-           src={this.state.img2} 
-           alt=""
-           />
-           :
-           <div className="Services__icons-rotate">
-            <img
-            className="Services__icons-rotate-fondo"
-             onClick={() => {this.handleSelected('2')} } 
-             src={this.state.img2} 
-             alt=""
-             />
-            <img 
-            className="Services__icons-rotate-draw"
-            src={rectangleGreen} alt=""/>
-
-           </div>
-          }
-        </div>
-        <div className="Services__icons-3">
-        {
-           this.state.img3==justiciaRectangle?
-           <img
-           onClick={() => {this.handleSelected('3')} } 
-           src={this.state.img3} 
-           alt=""
-           />
-           :
-           <div className="Services__icons-rotate">
-            <img
-            className="Services__icons-rotate-fondo"
-             onClick={() => {this.handleSelected('3')} } 
              src={this.state.img3} 
              alt=""
              />
             <img 
             className="Services__icons-rotate-draw"
             src={rectangleGreen} alt=""/>
-
            </div>
-          }
-        </div>
-      </div>
-      <Media query="(min-width: 832px)" 
-      render={
-       () => (
-        <div className="Services__selected">
-        { this.state.activador ?
-         <div className="Services__selected-true">
+           </div>
+           <div className="Services__selected-text">
+            <ul>
+             {
+              this.state.servicio3points.map( (puntos) => {
+                return <li> {puntos} </li>
+               } )
+             }
+            </ul>
+           </div>
+          </div>
+          <div className="">
+           <img src={mediacionFondo} alt=""/>
+          </div>
+       
+         </div>
+  {/*  */}
+  <div className="Services__selected-true">
           <div className="Services__selected-img">
-           <img src={this.state.fondo} alt=""/>
+           <img src={arbitrajeFondo} alt=""/>
            <div></div>
           </div>
           <div className="Services__selected-details">
            <div className="Services__selected-title">
+            <h1> {this.state.tituloServicio1} </h1>
             <div></div>
-            <h1> {this.handleTitle() } </h1>
            </div>
            <div className="Services__selected-text">
             <ul>
              {
               
-               this.handlePoint().map( (puntos) => {
+              this.state.servicio1points.map( (puntos) => {
                 return <li> {puntos} </li>
                } )
               
@@ -253,9 +186,32 @@ class Services extends React.Component {
            </div>
           </div>
          </div>
-         :
-         null
-        }
+
+           {/*  */}
+           <div className="Services__selected-true">
+          <div className="Services__selected-img">
+           <img src={justiciaFondo} alt=""/>
+           <div></div>
+          </div>
+          <div className="Services__selected-details">
+           <div className="Services__selected-title">
+            <div></div>
+            <h1> {this.state.tituloServicio3} </h1>
+           </div>
+           <div className="Services__selected-text">
+            <ul>
+             {
+              
+              this.state.servicio3points.map( (puntos) => {
+                return <li> {puntos} </li>
+               } )
+              
+             }
+            </ul>
+           </div>
+          </div>
+         </div>
+
        </div>
        )
       }

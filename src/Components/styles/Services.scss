@@ -45,7 +45,7 @@
     // border: 1px solid blue;
     grid-column: 1/3;
     grid-row: 2/3;
-    margin-bottom: 600px;
+    // margin-bottom: 200px;
 
     & .Services__selected-true{
      margin-top: 50px;
@@ -56,7 +56,8 @@
 
      & .Services__selected-details{
       // border: 1px solid red;
-      padding: 5% 10%;
+      // padding: 5% 10%;
+      height: 300px;
       & .Services__selected-title{
        // border: 1px solid red;
        padding-left: 5%;
@@ -93,11 +94,11 @@
     // border: 1px solid blue;
       position: relative;
       & img{
-       position: absolute;
-       top: 0;
-       right: 0;
-       width: 95%;
-       height: 90%;
+      //  position: absolute;
+      //  top: 0;
+      //  right: 0;
+       width: 379.3px ;
+       height: 268.78px;
       }
 
       & div{
@@ -115,6 +116,18 @@
       }
      }
     }
+    .meditacionC {
+      border: 1px solid blue;
+      display: flex;
+    }
+    // .meditacionImg  {
+     
+    //   img{
+    //     width: 379.3px ;
+    //     height: 268.78px;
+    //   }
+     
+    // }
 
   }
 
@@ -125,7 +138,6 @@
     padding: 50% 0;
     padding-left: 15%;
     position: relative;
-    transform: rotate(270deg);
     & div{
       // border: 1px solid green;
       font-size: 4rem;

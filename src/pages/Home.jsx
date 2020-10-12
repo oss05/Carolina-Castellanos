@@ -15,6 +15,7 @@ import carolina from '../images/carolina.png';
 import facebookGrey from '../images/facebookGrey.png';
 import twitterGrey from '../images/twitterGrey.png';
 import linkedlnGrey from '../images/linkedlnGrey.png';
+import ControlledCarousel  from '../Components/Carrusel';
 // import moreGrey from '../images/moreGrey.png';
 
 import './styles/Home.scss';
@@ -91,7 +92,9 @@ render(){
    </div>
    <section className="Home__teacher-in">
        <h5 className="Home__teacher-in-title" > {this.state.experienceTitle} </h5>
-       <div className="Home__teacher-in-list">
+        <ControlledCarousel/>
+
+       {/* <div className="Home__teacher-in-list">
            <div className="Home__teacher-in-item">
                <img src={esij} alt=""/>
            </div>
@@ -110,7 +113,7 @@ render(){
            <div className="Home__teacher-in-item">
                <img src={up} alt=""/>
            </div>
-       </div>
+       </div> */}
    </section>
 
   </div>

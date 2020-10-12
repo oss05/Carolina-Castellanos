@@ -124,9 +124,9 @@
  // border: 1px solid blue;
   grid-column: 2/3;
   grid-row: 1/2;
-  @include flexbox(space-between,flex-start,column);
+  @include flexbox(space-around,flex-start,column);
   padding-left: 50px;
-  padding-bottom: 100%;
+  padding-bottom: 50%;
   
   & div .Hero__rigth-title{
    margin-top: 5px;

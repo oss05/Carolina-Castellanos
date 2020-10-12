@@ -30,14 +30,14 @@ class Hero extends React.Component{
       description: props.state.hero.description,
       viewMore: props.state.hero.viewMore,
       img: {
-       heroImg1: calidadIcon,
+       heroImg1: calidadGreen,
        heroImg2: arbitraje,
        heroImg3: eficienciaIcon,
-       heroImgTitle1: null,
-       heroImgTitle2: null,
-       heroImgTitle3: null,
-       textDetails: null,
-       imgDetails: null,
+       heroImgTitle1: 'Calidad',
+       heroImgTitle2: 'Confianza',
+       heroImgTitle3: 'Eficiencia',
+       textDetails: 'Las acciones estratégicas para la solución alternativa de las controversias planteadas son ejecutadas con la mayor eficiencia posible, lo que optimiza costos. ',
+       imgDetails: calidadMochado,
       }
     }
    }
@@ -64,6 +64,8 @@ class Hero extends React.Component{
        heroImg2: arbitraje,
        heroImg3: eficienciaIcon,
        heroImgTitle1: 'Calidad',
+       heroImgTitle2: 'Confianza',
+       heroImgTitle3: 'Eficiencia',
        imgDetails: calidadMochado,
        textDetails: 'Las acciones estratégicas para la solución alternativa de las controversias planteadas son ejecutadas con la mayor eficiencia posible, lo que optimiza costos. '
       }
@@ -74,7 +76,9 @@ class Hero extends React.Component{
       img:{
        ...this.state.img,
        heroImg1: calidadIcon,
-       heroImgTitle1: null,
+       heroImgTitle1: 'Calidad',
+       heroImgTitle2: 'Confianza',
+       heroImgTitle3: 'Eficiencia',
        textDetails: null,
        imgDetails: null,
       }
@@ -88,7 +92,9 @@ class Hero extends React.Component{
         heroImg1: calidadIcon,
         heroImg2: confianzaGreen,
         heroImg3: eficienciaIcon,
+        heroImgTitle1: 'Calidad',
         heroImgTitle2: 'Confianza',
+        heroImgTitle3: 'Eficiencia',
         imgDetails: confianzaMochado,
         textDetails: 'Los clientes pueden estar confiados en que su asunto será atendido diligentemente, con precisión, calidad, profesionalismo y confidencialidad.',
        }
@@ -99,7 +105,9 @@ class Hero extends React.Component{
        img:{
         ...this.state.img,
         heroImg2: arbitraje,
-        heroImgTitle2: null,
+        heroImgTitle1: 'Calidad',
+        heroImgTitle2: 'Confianza',
+        heroImgTitle3: 'Eficiencia',
         imgDetails: null,
         textDetails: null
        }
@@ -113,6 +121,8 @@ class Hero extends React.Component{
          heroImg1: calidadIcon,
          heroImg2: arbitraje,
          heroImg3: eficienciaGreen,
+         heroImgTitle1: 'Calidad',
+         heroImgTitle2: 'Confianza',
          heroImgTitle3: 'Eficiencia',
          imgDetails: eficienciaMochado,
          textDetails: 'Altos estándares de calidad en la prestación de los servicios legales; desde el análisis del problema y el planteamiento de la estrategia, hasta la ejecución de los servicios.'
@@ -124,7 +134,9 @@ class Hero extends React.Component{
         img:{
          ...this.state.img,
          heroImg3: eficienciaIcon,
-         heroImgTitle3: null,
+         heroImgTitle1: 'Calidad',
+         heroImgTitle2: 'Confianza',
+         heroImgTitle3: 'Eficiencia',
          imgDetails: null,
          textDetails: null,
         }

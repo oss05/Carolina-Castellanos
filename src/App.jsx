@@ -47,7 +47,7 @@ class App extends React.Component {
           },
           homeMain: {
             carrerButton: 'Ver Trayectoria',
-            services: 'Servicios',
+            services: 'Servicios:',
             experienceTitle: 'Experiencia impartiendo clases y conferencias en',
             tituloServicio1: 'Arbitraje',
             tituloServicio2: 'Derecho Civil y Comercial',
