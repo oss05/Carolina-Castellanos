@@ -190,7 +190,7 @@ class Hero extends React.Component{
               {this.state.description}
             </p>
             <Link to="/acerca-de/#inicio" >
-            <Button message={this.state.viewMore}/>
+            <Button className="vermas" message={this.state.viewMore}/>
             </Link>
           </div>
           <div className="Hero__right">

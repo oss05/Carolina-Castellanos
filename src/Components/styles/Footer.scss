@@ -7,9 +7,15 @@
     width: 100vw;
     overflow-x: hidden;
     padding: 10px 0 70px 0;
-    background-color: $color-greenBig;
+    background-color: #C4C4C4;
+    border-top: solid 6px #255429;
+    border-bottom: solid 6px #255429;
     & .Footer__menu{
         // @include border-test(blue);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 40%;
 
         & ul{
@@ -22,7 +28,7 @@
                 border-right: 2px solid white;
                 & a{
                     text-decoration: none;
-                    color: white;
+                    color: #255429;
                     font-family: $font-roboto;
                     font-weight: 500;
                     line-height: 50px;
@@ -32,6 +38,38 @@
             & li:nth-of-type(4){
              border-right: none;
             }
+        }
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        a{
+            text-decoration: none;
+        }
+        p{
+            color: #255429;
+            margin: 0;
+            span{
+                margin-right: 10px;
+            }
+        }
+        .adv{
+            font-size: smaller;
+            color: #535353;
+        }
+    }
+    .somaD{
+        height: 15vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        a{
+            text-decoration: none;
+            color: #255429;
+            font-weight: bolder;
         }
     }
 

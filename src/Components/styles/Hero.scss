@@ -1,8 +1,12 @@
 @import "../../sassUtils/mixins.scss";
 @import "../../sassUtils/vars.scss";
 
+.vermas{
+  width: 150px;
+}
 .Hero{
   // border: 1px solid red;
+  margin-top: 150px;
   width: 100vw;
   display:grid;
   grid-template-columns: 85% 15%;
@@ -17,7 +21,7 @@
   }
 
   & .Hero-decorate-little{
-   // border: 1px solid red;
+   // border: 1px solid red;]
    width: 95%;
    height: 25%;
    position: absolute;
@@ -84,6 +88,9 @@
     }
   }
 }
+.vermas{
+  width:150px;
+}
 
 .Hero__left{
   // border: 1px solid red;
@@ -124,7 +131,7 @@
  // border: 1px solid blue;
   grid-column: 2/3;
   grid-row: 1/2;
-  @include flexbox(space-around,flex-start,column);
+  @include flexbox(space-around,center,column);
   padding-left: 50px;
   padding-bottom: 50%;
   
@@ -132,6 +139,16 @@
    margin-top: 5px;
    font-family: $font-raleway;
    font-weight: 700;
+  }
+}
+
+.Hero__right{
+  div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
   }
 }
 

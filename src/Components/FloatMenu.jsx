@@ -6,7 +6,8 @@ import menuIcon from '../images/menuIcon.png';
 import crossIcon from '../images/crossIcon.png';
 import triangle from '../images/triangle.png';
 import adressImg from '../images/navGoog.png';
-
+import es from '../images/es.png'
+import en from '../images/en.png'
 import './styles/FloatMenu.scss';
 
 class FloatMenu extends React.Component {
@@ -126,7 +127,7 @@ class FloatMenu extends React.Component {
                   </Link>
                 </li>
                 <li className="FloatMenu__block-menu-item">
-                  <Link onClick={() => { this.handleMenu() }} to="/acerca-de#inicio" >{this.state.menu.nav.menu3}
+                  <Link onClick={() => { this.handleMenu() }} to="#servicios" >{this.state.menu.nav.menu3}
                     <img className="FloatMenu__block-menu-triangle" src={triangle} alt="triangle" />
                   </Link>
                 </li>
@@ -139,14 +140,24 @@ class FloatMenu extends React.Component {
             </div>
             <div className="FloatMenu__block-details">
               <div className="FloatMenu__block-details-left">
-                <img src={adressImg} alt="" />
+                <p>Fuente Bella 3299. piso 12</p>
+                <p>Conjunto Residencial del Pedregal</p>
+                <p>Tlalpan, CDMX, C.P. 14130</p>
+                <div>
+                  <span>+52 (55) 83100774</span>
+                  <span>+52 (55) 62035541</span>
+                </div>
+                <a target="blank" href="mailto: contacto@ccmx.com.mx">contacto@ccmx.com.mx</a>
               </div>
               <div className="FloatMenu__block-details-right">
-                <div> {this.state.menu.nav.languageReference} </div>
                 <div
                   onClick={() => { this.handleLaguage() }}
                 >
-                  {this.state.menu.language === 'Es' ? 'En' : 'Sp'}
+                 {this.state.menu.language === 'Es' 
+                ? 
+                <img className="imgLang" src={en}/> 
+                : 
+                <img className="imgLang" src={es}/>}
                 </div>
               </div>
             </div>

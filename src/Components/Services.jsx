@@ -21,6 +21,7 @@ import albotrajeMbovil from '../images/albitrajeMovil.png'
 import logoAlbitraje from '../images/albitrajeHome2.png'
 import civilHome from '../images/civilHome.png'
 import logoCivil from '../images/civilHome2.png'
+import civilMovil from '../images/civilMovil.png'
 
 class Services extends React.Component {
 
@@ -123,7 +124,7 @@ class Services extends React.Component {
   render() {
     return (
       <>
-        <section className="Services">
+        <section id="servicios" className="Services">
           <div className="Services__title">
             <div>{this.state.services} </div>
             <div className="Services__decorate"></div>
@@ -222,7 +223,7 @@ class Services extends React.Component {
                 <div className="">
                 <div className="meditacionC">
                   <div className="Services__selected-details">
-                  <div className="">
+                  <div className="movil">
                     <img src={meditacionMovil} alt="" />
                   </div>
                     <div className="Services__selected-title seccionHome">
@@ -246,7 +247,7 @@ class Services extends React.Component {
                 {/*  */}
                 <div className="meditacionC2">
                   <div className="Services__selected-details">
-                  <div className="">
+                  <div className="movil">
                     <img src={albotrajeMbovil} alt="" />
                   </div>
                     <div className="Services__selected-title seccionHome">
@@ -271,8 +272,8 @@ class Services extends React.Component {
                 {/*  */}
                 <div className="meditacionC">
                   <div className="Services__selected-details">
-                  <div className="">
-                    <img src={civilHome} alt="" />
+                  <div className="movil">
+                    <img src={civilMovil} alt="" />
                   </div>
                     <div className="Services__selected-title seccionHome">
                       <h1> {this.state.tituloServicio2} </h1>

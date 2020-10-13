@@ -138,9 +138,15 @@
     padding-bottom: 10px;
     border-left: 5px solid #255429;
     & span{
-      font-weight: 500;
+      color: #838C8D;
+      font-size: 20px;
+
     }
   }
+}
+.trayectG{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Home__decorate-bottom{
@@ -177,6 +183,9 @@
 }
 
 @media screen and(max-width: 850px){
+  .Home__main-right{
+    margin-top: 50px;
+  }
  .Home__teacher-in-title{
   font-size: 1rem;
  }

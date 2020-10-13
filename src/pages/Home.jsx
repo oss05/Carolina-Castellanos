@@ -75,7 +75,7 @@ render(){
        </div>
        <div className="Home__main-right-profile-details">
            <h1 className="Home__main-right-profile-data">Carolina Castellanos López<br/><span>Abogada Consultora</span> </h1>
-           <Link to="/trayectoria/#inicio">
+           <Link className="trayectG"  to="/trayectoria/#inicio">
            <Button message={this.state.carrerButton} />
            </Link>
        </div>

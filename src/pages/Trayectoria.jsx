@@ -106,7 +106,7 @@ class Trayectoria extends React.Component{
      <div className="Trayectoria__left-img">
       <img src={caroCircle} alt="foto de carolina en circulo"/>
      </div>
-     <a target="blank" href="mailto: abc@example.com"><Button Linkedln message={this.props.data.trayectoria.sendButton} /></a>
+     <a target="blank" href="mailto: contacto@ccmx.com.mx"><Button Linkedln message={this.props.data.trayectoria.sendButton} /></a>
     </div>
     <div className="Trayectoria__right">
      <h1 className="Trayectoria__right-name">Carolina Castellanos López</h1>
@@ -119,7 +119,7 @@ class Trayectoria extends React.Component{
      <h3 className="Trayectoria__right-title"> {this.props.data.trayectoria.title} </h3>
      <div className="resumenAll">
       <div className="Resumen">
-        <h4>Resumen Profecional</h4>
+        <h4>Resumen Profesional</h4>
         <div></div>
         </div>
         <li className="Trayectoria__right-details" id="details-carrer">  </li>

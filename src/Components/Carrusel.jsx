@@ -22,11 +22,6 @@ const ControlledCarousel = () => {
                 <img className="d-block w-80" src={esij} alt="First slide"/>      
                 <img className="d-block w-80" src={itam} alt="First slide"/>
                 <img className="d-block w-80" src={tecMonterrey} alt="First slide"/> 
-            </div>
-        </Carousel.Item>
-
-        <Carousel.Item>
-            <div className="fristpart d-flex justify-content-around">
                 <img className="d-block w-80" src={tsjGuerrero} alt="First slide"/>      
                 <img className="d-block w-80" src={unam} alt="First slide"/>
                 <img className="d-block w-80" src={up} alt="First slide"/> 
@@ -38,6 +33,20 @@ const ControlledCarousel = () => {
                 <img className="d-block w-80" src={esij} alt="First slide"/>      
                 <img className="d-block w-80" src={itam} alt="First slide"/>
                 <img className="d-block w-80" src={tecMonterrey} alt="First slide"/> 
+                <img className="d-block w-80" src={tsjGuerrero} alt="First slide"/>      
+                <img className="d-block w-80" src={unam} alt="First slide"/>
+                <img className="d-block w-80" src={up} alt="First slide"/> 
+            </div>
+        </Carousel.Item>
+
+        <Carousel.Item>
+            <div className="fristpart d-flex justify-content-around">
+                <img className="d-block w-80" src={esij} alt="First slide"/>      
+                <img className="d-block w-80" src={itam} alt="First slide"/>
+                <img className="d-block w-80" src={tecMonterrey} alt="First slide"/> 
+                <img className="d-block w-80" src={tsjGuerrero} alt="First slide"/>      
+                <img className="d-block w-80" src={unam} alt="First slide"/>
+                <img className="d-block w-80" src={up} alt="First slide"/> 
             </div>
         </Carousel.Item>
        
