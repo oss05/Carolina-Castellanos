@@ -13,11 +13,11 @@
 .About-container{
  // border: 1px solid red;
  width: 100%;
- display: grid;
- grid-template-columns: 55% 40%;
- grid-template-rows: auto auto;
- grid-column-gap: 5%;
- grid-row-gap: 50px;
+//  display: grid;
+//  grid-template-columns: 55% 40%;
+//  grid-template-rows: auto auto;
+//  grid-column-gap: 5%;
+//  grid-row-gap: 50px;
 
  & .About__img{
   // border: 1px solid blue;
@@ -48,10 +48,10 @@
 
  & .About__littleDescription{
   // border: 1px solid black;
-  
-  grid-column: 2/3;
-  grid-row: 1/2;
-  padding: 0 10%;
+  margin: auto;
+  // padding: 0 10%;
+  width: 30vw;
+  margin-bottom: 70px;
 
   & div{
    border-left: 10px solid #587454;
@@ -61,7 +61,6 @@
     font-family: $font-raleway;
     font-weight: bold;
     font-size: 2rem;
-
    }
 
    & p{
@@ -70,9 +69,13 @@
     font-size: 1.5rem;
     color: #707070;
    }
+
   }
 
  }
+ .alter{
+  color: #587454;
+}
 
  & .About__details{
   // border: 1px solid black;

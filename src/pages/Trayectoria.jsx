@@ -6,7 +6,7 @@ import caroCircle from '../images/caroCircle.png';
 import Facebook from '../images/Facebook.png';
 import Twitter from '../images/Twitter.png';
 import Linkedln from '../images/Linkedln.png';
-
+import dwl from '../images/download-b.png'
 
 import './styles/Trayectoria.scss';
 
@@ -107,6 +107,11 @@ class Trayectoria extends React.Component{
       <img src={caroCircle} alt="foto de carolina en circulo"/>
      </div>
      <a target="blank" href="mailto: contacto@ccmx.com.mx"><Button Linkedln message={this.props.data.trayectoria.sendButton} /></a>
+     <div className="cvpdf">
+       <a href=""><img src={dwl} alt=""/></a>
+       <p>CV pdf</p>
+     </div>
+     
     </div>
     <div className="Trayectoria__right">
      <h1 className="Trayectoria__right-name">Carolina Castellanos López</h1>

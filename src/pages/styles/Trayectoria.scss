@@ -71,6 +71,20 @@
 .resumenAll{
     display: flex;
 }
+.cvpdf{
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    // border: solid 2px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    p{
+        color: #838C8D;
+        font-weight: bolder;
+    }
+}
 
 .Resumen{
     writing-mode: vertical-lr;

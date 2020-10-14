@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles/GreenDecorate.scss';
+import alter from '../images/alternativa.png';
 
 
 class GreenDecorate extends React.Component{
@@ -16,13 +17,13 @@ class GreenDecorate extends React.Component{
       this.props.params.nav.title? 
       <div className="About__decorate">
       <div></div>
-      <h1> {this.props.params.nav.title} </h1>
+      <h2> {this.props.params.nav.title} </h2>
       <p> {this.props.params.nav.details} </p>
      </div>
      :
      ''
      }
-    <img src={this.props.params.nav.greenDecorateImg} alt=""/>
+    <img src={alter} alt=""/>
     <span> {this.props.params.nav.greenDecorateMessage} </span>
   </div>
   </>

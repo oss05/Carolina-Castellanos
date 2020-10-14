@@ -2,7 +2,7 @@ import React from 'react';
 // import ReactDom from 'react-dom';
 import Media from 'react-media';
 import GreenDecorate from '../Components/GreenDecorate';
-import writeAbout from '../images/writeAbout.png';
+import alter from '../images/alternativa.png';
 import './styles/About.scss';
 
 class About extends React.Component{
@@ -66,22 +66,16 @@ class About extends React.Component{
 
     <div className="About">
     <section className="About-container">
-     <div className="About__img">
-      <div>
-      <img src={writeAbout} alt=""/>
-      <div></div>
-      </div>
-     </div>
      <div className="About__littleDescription">
       <div>
-       <h2> {this.props.data.about.titleLittle} </h2>
+       <h2  > {this.props.data.about.titleLittle} </h2>
        <p>
         {this.props.data.about.descriptionLittle}
        </p>
       </div>
      </div>
      <div className="About__details">
-      <h2> {this.props.data.about.title} </h2>
+      <h2 className="alter"> {this.props.data.about.title} </h2>
       <p id="deatils-about">
       
       </p>

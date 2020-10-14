@@ -8,6 +8,9 @@ import triangle from '../images/triangle.png';
 import adressImg from '../images/navGoog.png';
 import es from '../images/es.png'
 import en from '../images/en.png'
+import celI from '../images/celicon.png'
+import adress from '../images/addresIcon.png'
+import mail from '../images/Frame.png'
 import './styles/FloatMenu.scss';
 
 class FloatMenu extends React.Component {
@@ -140,19 +143,25 @@ class FloatMenu extends React.Component {
             </div>
             <div className="FloatMenu__block-details">
               <div className="FloatMenu__block-details-left">
-                <p>Fuente Bella 3299. piso 12</p>
+                <p><span><img className="iconAdress" src={adress} alt=""/></span> Fuente Bella 3299. piso 12</p>
                 <p>Conjunto Residencial del Pedregal</p>
                 <p>Tlalpan, CDMX, C.P. 14130</p>
                 <div>
+                <span><img className="iconAdress" src={celI} alt=""/></span>
                   <span>+52 (55) 83100774</span>
+                  <div></div>
+                  <span><img className="iconAdress" src={celI} alt=""/></span>
                   <span>+52 (55) 62035541</span>
                 </div>
-                <a target="blank" href="mailto: contacto@ccmx.com.mx">contacto@ccmx.com.mx</a>
+                 <span><img className="iconAdress" src={mail} alt=""/></span>   <a target="blank" href="mailto: contacto@ccmx.com.mx">contacto@ccmx.com.mx</a>
               </div>
-              <div className="FloatMenu__block-details-right">
+              <div  className="FloatMenu__block-details-right">
                 <div
                   onClick={() => { this.handleLaguage() }}
-                >
+                >{this.state.menu.language === 'Es'
+                ? <p>Language</p>
+                : <p>Lenguaje</p>
+                }
                  {this.state.menu.language === 'Es' 
                 ? 
                 <img className="imgLang" src={en}/> 

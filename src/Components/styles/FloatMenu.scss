@@ -51,7 +51,7 @@
   grid-column: 1/2;
   grid-row: 1/2;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   & img{
     width: 75%;
   }
@@ -107,6 +107,9 @@
   height: 30px;
   border-radius: 50%;
 }
+.iconAdress{
+  width: 15px !important;
+}
 
 .FloatMenu__block-details{
   // border: 1px solid black;
@@ -152,6 +155,15 @@
       font-weight: bold;
       font-size: 1.2rem;
       cursor: pointer;
+    }
+    div{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      p{
+        color: #707070;
+      }
     }
   }
 }

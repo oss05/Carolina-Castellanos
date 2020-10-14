@@ -31,7 +31,7 @@ margin-bottom: 7px;
   width: 50%;
   height: 50%;
   z-index: 1;
-  bottom:5px;
+  bottom:22px;
   left: 4%;
   padding-left: 5%;
 
@@ -49,13 +49,15 @@ margin-bottom: 7px;
    left: 0;
   }
 
-  & h1{
+  & h2{
    font-family: $font-monserrat;
+   padding: 10px;
   }
 
   & p{
    font-family: $font-monserrat;
    color: #707070;
+   padding: 10px;
   }
  }
  
